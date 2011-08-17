@@ -1,0 +1,278 @@
+@charset "utf-8";
+/* CSS Document */
+/* beginning of reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+/* end of reset*/
+html
+{
+	
+	position:relative;
+	width:100%;
+	height:100%;
+	
+}
+body
+{
+	position:relative;
+	background-image:url(../images/bg_top_internal.jpg);
+	background-repeat:no-repeat;
+	background-position:top center;		
+	width:100%;
+	height:100%;	
+}
+#General_bg_footer
+{
+	position:relative;
+	background-image:url(../images/bg_footer_internal.jpg);
+	background-repeat:no-repeat;
+	background-position:bottom center;	
+	width:100%;
+	min-height:1000px;
+	margin:auto;
+}
+#General
+{
+	position:relative;
+	width:960px;
+	min-height:1000px;
+	margin:auto;
+}
+	
+	#Header
+	{
+		position:relative;
+		width:960px;
+		min-height:221px;
+		margin:auto;
+	}
+		#Logo_field
+		{
+			position:absolute;
+			top:55px;
+			left:55px;
+			width:150px;
+			min-height:25px;
+			margin:auto;
+			float:right;
+		}	
+		#Login
+		{
+		    position:relative;
+			width:380px;
+			min-height:25px;
+			margin:auto;
+			float:right;
+		}	
+		#Menu
+		{
+			background-image:url(../images/menu/bg_menu.png);
+			background-repeat:no-repeat;
+			background-position:center;
+			position:absolute;
+			left:400px;
+			top:128px;
+			width:400px;
+			height:49px;
+			margin:auto;
+			border:#b09 1px dashed;
+		}	
+			#Menu ul
+			{
+				position:relative;
+				width:auto;
+				height:auto;
+			}
+				#Menu li
+				{
+					display:inline;
+					
+				}						
+					.awelness
+					{	
+					background:#000;
+					}
+						.awelness a
+						{
+							display:block;	
+							background-image:url(../images/menu/bt_awelness.png);
+							background-repeat:no-repeat;
+							background-position:0px -50px;
+							width:138px;
+							height:49px;
+							text-decoration:none;
+							padding-right:138px;	
+							padding-bottom:40px;
+							*padding-top:17px;  /*ie7*/
+							background:#000;
+												
+						}	
+															
+	#Content
+	{
+		position:relative;
+		display:inline-block;
+		width:960px;
+		min-height:500px;
+		height:auto;
+		margin:auto;
+		
+	}	
+	#Box_left
+	{
+		position:relative;
+		float:left;
+		display:inline-block;
+		width:240px;
+		min-height:500px;
+		height:auto;
+		top:45px;
+	}
+		#Box_left .Img_align
+		{
+			position:relative;
+			top:-12px;
+		}	
+	#Box_right
+	{
+		position:relative;
+		float:left;
+		display:inline-block;
+		width:688px;
+		min-height:490px;
+		height:auto;
+		padding:5px 16px 5px 16px;
+		top:45px;
+	}		
+		.Breadcrumb
+		{
+			font-family:Tahoma, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#afe1ff;
+			text-decoration:none;
+		}
+			.Breadcrumb a
+			{
+				font-family:Tahoma, Geneva, sans-serif;
+				font-size:12px;
+				font-weight:normal;
+				color:#afe1ff;
+				text-decoration:none;
+			}				
+			.Breadcrumb a:hover
+			{
+				font-family:Tahoma, Geneva, sans-serif;
+				font-size:12px;
+				font-weight:normal;
+				color:#09F;
+				text-decoration:none;
+			}		
+		.Title_internal_box_right	
+		{
+			font-family:Tahoma, Geneva, sans-serif;
+			font-size:24px;
+			font-weight:normal;
+			color:#0979be;
+		}
+		.Text_internal_box_right	
+		{
+			font-family:Tahoma, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#161616;
+		}		
+#Footer
+	{
+		position:relative;
+		position:relative;
+		width:960px;
+		height:250px;
+		margin:auto;
+		clear:both	
+	}
+		#Footer_content_box_bg	
+		{
+			position:relative;
+			display:block;
+			width:999px;	
+			height:200px;
+			background-image:url(../images/menu/bg_footerbox.png);
+			background-repeat:no-repeat;
+			background-position:center top;
+			left:-55px;
+			top:33px;
+		}		
+			#Footer_content_box	
+			{
+				position:relative;
+				display:block;
+				width:571px;	
+				height:33px;
+				margin:auto;
+				top:30px;
+			}	
+			#Footer_content_socialnet
+			{
+				position:relative;
+				display:block;
+				left:800px;
+				top:-15px;					
+			}
+			.Footer_text
+			{
+				position:relative;
+				font-family:Tahoma, Geneva, sans-serif;
+				font-size:9px;
+				font-weight:normal;
+				color:#6699cc;
+				text-align:center;
+				top:8px;
+				left:10px;
+			}
+	.clear{ clear:both; width:100%}

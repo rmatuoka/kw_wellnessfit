@@ -1,14 +1,53 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Layout Interna!!</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+	<title>Wellness Fit <%=yield :title%></title>	
+	<%=javascript_include_tag  :defaults %>
+	<%=javascript_include_tag "jquery"%>
+	<script>
+		jQuery.noConflict();
+	</script>
+	<%= csrf_meta_tag %>
+	<%=stylesheet_link_tag "internal" %>
+	<%=yield :head%>
 </head>
 <body>
+<div id="General_bg_footer">
+<div id="General">
+	<div id="Header">
+		<div id="Logo_field">
+			<a href="#"><%= image_tag ("logo.png",:width=>"246", :height=>"98") %></a>
+		</div>
+		<div id="Login"></div>
+		<div id="Menu">
+		    <ul>
+			<li></li>
+		    </ul>
+		</div>
+	</div><!-- Header -->
 
-<%= yield %>
+	<%= yield %>
+
+	<div id="Footer">
+		<div id="Footer_content_box_bg">
+			<div id="Footer_content_box">
+		    <%=link_to image_tag ("menu/bt_fhome.png", :width=>"41", :height=>"33"),"#" %>    
+			<%=link_to image_tag ("menu/bt_fawelnessftnes.png", :width=>"98", :height=>"33"),"#" %>
+			<%=link_to image_tag ("menu/bt_fnoticias.png", :width=>"61", :height=>"33"), "#" %>
+			<%=link_to image_tag ("menu/bt_fglaboral.png", :width=>"122", :height=>"33"),"#" %>
+			<%=link_to image_tag ("menu/bt_fdicas.png", :width=>"41", :height=>"33"),"#" %>
+			<%=link_to image_tag ("menu/bt_ftrabalheconosco.png", :width=>"123", :height=>"33"),"#" %>
+			<%=link_to image_tag ("menu/bt_fcontato.png", :width=>"61", :height=>"33"),"#" %>            
+		    </div>
+		    <div id="Footer_content_socialnet">
+		    <%=link_to image_tag ("img_twitter.png", :width=>"107", :height=>"48"),"#" %>
+			<%=link_to image_tag ("img_facebook.png", :width=>"108", :height=>"49"),"#" %>
+		    </div>
+		    <p class="Footer_text">Wellness Fit © 2011 - Todos os direitos reservados.</p>
+		</div>
+	    </div><!-- Footer end -->
+	</div><!-- General end -->
+	</div><!-- General_bg_footer end -->
 
 </body>
 </html>

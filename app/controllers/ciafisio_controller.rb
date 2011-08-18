@@ -1,4 +1,5 @@
 class CiafisioController < ApplicationController
+  layout "ciafisio"
   def index
   end
 
@@ -6,3 +7,4 @@ class CiafisioController < ApplicationController
   end
 
 end
+

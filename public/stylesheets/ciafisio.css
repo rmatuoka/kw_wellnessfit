@@ -60,17 +60,17 @@ html
 body
 {
 	position:relative;
-	background-image:url(../images/bg_top_internal.jpg);
+	background-image:url(../images/bg_top_internal_cia.jpg);
 	background-repeat:no-repeat;
 	background-position:top center;		
 	width:100%;
-	height:100%;	
-	overflow-x: hidden;
+	height:100%;
+	overflow-x: hidden;	
 }
 #General_bg_footer
 {
 	position:relative;
-	background-image:url(../images/bg_footer_internal.jpg);
+	background-image:url(../images/bg_footer_internal_cia.jpg);
 	background-repeat:no-repeat;
 	background-position:bottom center;	
 	width:100%;
@@ -95,13 +95,25 @@ body
 		#Logo_field
 		{
 			position:absolute;
-			top:55px;
+			top:25px;
 			left:55px;
 			width:150px;
 			min-height:25px;
 			margin:auto;
 			float:right;
-		}	
+		}
+		
+		#Logo_pb_field
+		{
+			position:absolute;
+			top:63px;
+			left:720px;
+			width:150px;
+			min-height:25px;
+			margin:auto;
+			float:right;
+		}
+			
 		#Login
 		{
 		    position:relative;
@@ -115,20 +127,23 @@ body
 			background-image:url(../images/menu/bg_menu.png);
 			background-repeat:no-repeat;
 			background-position:center;
-			background-color:#5ca5d3;
+			background-color:#2b7345;
 			position:absolute;
 			left:90px;
 			top:186px;
 			width:766px;
 			height:35px;
 			margin:auto;
+			*height:34px;
+			*top:187px;
 		}	
 		
 			#Menu ul
 			{
 				width:auto;
-				height:auto;
-				
+				height:35px;
+				*padding-top:10px;
+				*height:35px;
 			}
 
 				
@@ -140,10 +155,9 @@ body
 					font-size:12px;
 					color:#FFFFFF;
 					height:35px;
-					
 					text-align:center;
 					text-decoration:none;
-	
+					*padding-top:100px;
 				}
 				
 				#Menu ul li a
@@ -151,14 +165,18 @@ body
 					font-family:Tahoma, Geneva, sans-serif;
 					font-weight:bold;
 					font-size:12px;
+					text-decoration:none;
+					
 					color:#FFFFFF;
 					height:35px;
+					
 					padding-left:33px;
 					padding-right:33px;
 					display:table-cell;
 					vertical-align:middle;
+					*vertical-align:top;
 					text-align:center;
-					text-decoration:none;
+					*line-height:36px;
 				}
 				
 				#Menu li a:hover
@@ -169,7 +187,7 @@ body
 					font-family:Tahoma, Geneva, sans-serif;
 					font-weight:bold;
 					font-size:12px;
-					color:#054c7b;
+					color:#2b7345;
 					height:35px;
 					padding-left:33px;
 					padding-right:33px;
@@ -179,21 +197,14 @@ body
 					text-decoration:none;
 				}
 				
-				.ciafisio a
+				#Menu li a:hover /*hack ie7*/
 				{
-					display:inline-block;
-					font-family:Tahoma, Geneva, sans-serif;
-					font-weight:bold;
-					font-size:12px;
-					background-color:#b3d557;
-					color:#b3d557;
-					height:35px;
-					padding-left:33px;
-					padding-right:33px;
-					display:table-cell;
-					vertical-align:middle;
-					text-align:center;
-					text-decoration:none;
+					*line-height:37px;
+					*margin-top:1px;
+					*vertical-align:top;
+					*padding-top:11px;
+					*padding-bottom:10px;
+					*height:37px;
 				}
 				
 				#Menu li a:active
@@ -211,7 +222,8 @@ body
 					vertical-align:middle;
 					text-align:center;
 					text-decoration:none;
-				}						
+				}
+										
 					.awelness
 					{	
 					background:#000;
@@ -240,21 +252,9 @@ body
 		min-height:500px;
 		height:auto;
 		margin:auto;
+		margin-top:50px;
 		
 	}	
-	
-	#Content_int
-	{
-		position:relative;
-		display:inline-block;
-		width:960px;
-		min-height:500px;
-		height:auto;
-		margin:auto;
-		margin-top:60px;
-		
-	}
-	
 	#Box_left
 	{
 		position:relative;
@@ -286,16 +286,15 @@ body
 			font-family:Tahoma, Geneva, sans-serif;
 			font-size:12px;
 			font-weight:normal;
-			color:#afe1ff;
+			color:#48522c;
 			text-decoration:none;
-
 		}
 			.Breadcrumb a
 			{
 				font-family:Tahoma, Geneva, sans-serif;
 				font-size:12px;
 				font-weight:normal;
-				color:#afe1ff;
+				color:#48522c;
 				text-decoration:none;
 			}				
 			.Breadcrumb a:hover
@@ -303,17 +302,16 @@ body
 				font-family:Tahoma, Geneva, sans-serif;
 				font-size:12px;
 				font-weight:normal;
-				color:#09F;
+				color:#48522c;
 				text-decoration:none;
-			}
-		
-
+			}		
 		.Title_internal_box_right	
 		{
 			font-family:Tahoma, Geneva, sans-serif;
 			font-size:24px;
 			font-weight:normal;
-			color:#0979be;
+			color:#2b7345;
+			margin-top:10px;
 		}
 		.Text_internal_box_right	
 		{
@@ -338,11 +336,11 @@ body
 			display:block;
 			width:999px;	
 			height:200px;
-			background-image:url(../images/menu/bg_footerbox.png);
+			background-image:url(../images/menu/bg_footerbox_cia.png);
 			background-repeat:no-repeat;
 			background-position:center top;
 			left:-55px;
-			top:33px;
+			top:31px;
 		}		
 			#Footer_content_box	
 			{
@@ -366,7 +364,7 @@ body
 				font-family:Tahoma, Geneva, sans-serif;
 				font-size:9px;
 				font-weight:normal;
-				color:#6699cc;
+				color:#85a14a;
 				text-align:center;
 				top:8px;
 				left:10px;

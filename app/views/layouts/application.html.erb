@@ -16,17 +16,17 @@
 <div id="General">
 	<div id="Header">
 		<div id="Logo_field">
-			<a href="#"><%= image_tag ("logo.png",:width=>"246", :height=>"98") %></a>
+			<%=link_to image_tag ("logo.png",:width=>"246", :height=>"98"), root_path %>
 		</div>
 		<div id="Login"></div>
 		<div id="Menu">
 		    <ul>
-			<li><a href=''>a wellness fit</a></li>
-			<li><a href=''>notícias</a></li>
-			<li><a href=''>ginástica laboral</a></li>
-			<li><a href=''>dicas</a></li>
-			<li><a href=''>contato</a></li>
-			<li class='ciafisio'><a href=''>cia fisio</a></li>
+			<li><%=link_to "a wellness fit", about_index_path %> </li>
+			<li><%=link_to "notícias", news_index_path %> </li>
+			<li><%=link_to "ginástica laboral", labors_index_path %> </li>
+			<li><%=link_to "dicas", hints_index_path %> </li>
+			<li><%=link_to "contato", contacts_new_path %> </li>
+			<li class='ciafisio'><%=link_to "ciafisio", ciafisio_index_path %> </li>
 		    </ul>
 		</div>
 	</div><!-- Header -->
@@ -36,13 +36,13 @@
 	<div id="Footer">
 		<div id="Footer_content_box_bg">
 			<div id="Footer_content_box">
-		    <%=link_to image_tag ("menu/bt_fhome.png", :width=>"41", :height=>"33"),"#" %>    
-			<%=link_to image_tag ("menu/bt_fawelnessftnes.png", :width=>"98", :height=>"33"),"#" %>
-			<%=link_to image_tag ("menu/bt_fnoticias.png", :width=>"61", :height=>"33"), "#" %>
-			<%=link_to image_tag ("menu/bt_fglaboral.png", :width=>"122", :height=>"33"),"#" %>
-			<%=link_to image_tag ("menu/bt_fdicas.png", :width=>"41", :height=>"33"),"#" %>
-			<%=link_to image_tag ("menu/bt_ftrabalheconosco.png", :width=>"123", :height=>"33"),"#" %>
-			<%=link_to image_tag ("menu/bt_fcontato.png", :width=>"61", :height=>"33"),"#" %>            
+		    <%=link_to image_tag ("menu/bt_fhome.png", :width=>"41", :height=>"33"), root_path %>    
+			<%=link_to image_tag ("menu/bt_fawelnessftnes.png", :width=>"98", :height=>"33"), about_index_path %>
+			<%=link_to image_tag ("menu/bt_fnoticias.png", :width=>"61", :height=>"33"), news_index_path %>
+			<%=link_to image_tag ("menu/bt_fglaboral.png", :width=>"122", :height=>"33"), labors_index_path %>
+			<%=link_to image_tag ("menu/bt_fdicas.png", :width=>"41", :height=>"33"), hints_index_path %>
+			<%=link_to image_tag ("menu/bt_ftrabalheconosco.png", :width=>"123", :height=>"33"), root_path %>
+			<%=link_to image_tag ("menu/bt_fcontato.png", :width=>"61", :height=>"33"), contacts_new_path %>            
 		    </div>
 		    <div id="Footer_content_socialnet">
 		    <%=link_to image_tag ("img_twitter.png", :width=>"107", :height=>"48"),"#" %>

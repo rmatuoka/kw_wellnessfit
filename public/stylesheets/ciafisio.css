@@ -149,7 +149,8 @@ body
 				
 				#Menu li
 				{
-					display:inline;
+					display:inline-block;
+					*display:inline;
 					font-family:Tahoma, Geneva, sans-serif;
 					font-weight:bold;
 					font-size:12px;

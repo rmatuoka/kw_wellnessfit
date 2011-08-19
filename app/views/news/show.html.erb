@@ -1,2 +1,28 @@
-<h1>News#show</h1>
-<p>Find me in app/views/news/show.html.erb</p>
+<%content_for :title do%>
+	Notícias
+<%end%>
+<%content_for :head do %>
+	<%#= stylesheet_link_tag "cases" %>
+	<%#=javascript_include_tag "showcases.js"%>
+<%end%>
+<div id="Content">
+	<div id="Box_left">
+		<%=image_tag ("img_noticias.png", :class=>"Img_align") %>
+	</div><!-- Box_left end -->
+	<div id="Box_right">
+		<span class="Breadcrumb"><span class="Breadcrumb"><a href="#">wellness fit</a></span> : <span class="Breadcrumb"><a href="#">notícias</a></span></span>
+		<h1 class="Title_internal_box_right">Notícias</h1><br />
+		<p class="Text_internal_box_right">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac enim mollis urna placerat venenatis. Suspendisse potenti. Nam sollicitudin, diam eu mattis fringilla, libero metus molestie nulla, nec adipiscing purus justo ut diam. Maecenas suscipit lectus porta lorem consectetur hendrerit. Pellentesque vel diam orci, et facilisis orci. Cras consectetur mauris ut odio accumsan eget varius dolor eleifend. Donec id iaculis ipsum.
+
+Curabitur vulputate venenatis faucibus. Aliquam eget orci est. Phasellus eget mauris mattis neque porttitor vehicula. Integer lectus velit, mollis in commodo sit amet, venenatis ac turpis. Aenean molestie imperdiet lorem at auctor. Proin tincidunt blandit metus quis ultrices. Ut laoreet pellentesque pellentesque. Sed sed pretium erat. Donec et metus ipsum.
+
+Ut ornare mi quis velit congue dapibus. Aenean urna sem, lobortis eget accumsan tristique, aliquam et sem. Etiam neque odio, molestie in lacinia eget, laoreet ullamcorper odio. Vivamus consectetur arcu tincidunt tortor aliquam non scelerisque turpis vulputate. Integer sem augue, interdum rutrum viverra eget, vehicula quis elit. Duis arcu dolor, cursus ac pellentesque in, congue nec dolor. Nullam sit amet augue metus.
+
+Duis pulvinar enim ut lectus tristique placerat. Quisque pretium auctor convallis. Integer sed erat urna, id malesuada quam. Praesent faucibus elit a neque pharetra at fermentum tortor rutrum. Cras bibendum vulputate nunc, vel fermentum libero feugiat vel. Cras pretium, est non luctus tempor, tellus risus eleifend enim, nec consectetur dui diam eu sem. Nullam a nisi eu tellus volutpat fringilla in eu purus. Maecenas adipiscing eleifend tortor, vitae tincidunt libero luctus non. Aenean scelerisque purus at nisl rutrum a ultricies enim pretium. In hac habitasse platea dictumst.
+
+Cras vulputate, urna sed iaculis fermentum, lectus lacus malesuada risus, quis porttitor erat est sit amet odio. Ut pellentesque libero imperdiet mauris mollis ut interdum est vestibulum. Donec consequat urna vel nulla blandit fringilla. Integer tempus neque at nisi gravida at interdum nulla mollis. Nulla semper, purus venenatis porta tempus, mauris lorem venenatis mi, vel congue nisi erat id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam aliquam lacinia augue, non accumsan est consectetur eget. Etiam ac nisi vitae orci venenatis sollicitudin laoreet et tellus. Praesent vel velit orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam non metus odio. Aliquam erat volutpat. Fusce quis mi ligula. 
+		</p>
+	</div><!-- Box_right end -->
+	<div class="clear"></div>
+</div><!-- Content end -->

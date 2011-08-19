@@ -1,2 +1,43 @@
-<h1>Contacts#new</h1>
-<p>Find me in app/views/contacts/new.html.erb</p>
+<%content_for :title do%>
+	Contato
+<%end%>
+<%content_for :head do %>
+	<%#= stylesheet_link_tag "cases" %>
+	<%#=javascript_include_tag "showcases.js"%>
+<%end%>
+<div id="Content">
+	<div id="Box_left">
+		<%=image_tag ("img_contato.png", :class=>"Img_align") %>
+	</div><!-- Box_left end -->
+	<div id="Box_right">
+		<span class="Breadcrumb"><span class="Breadcrumb"><a href="#">wellness fit</a></span> : <span class="Breadcrumb"><a href="#">dicas</a></span></span>
+		<h1 class="Title_internal_box_right">Contato</h1><br />
+		<p class="Text_internal_box_right">
+			Conheça as melhores dicas para aumentar seu rendimento e diminuir a fadiga que a rotina pode causar. Alivie o estresse e aproveite melhor o tempo no trabalho com exercícios e hábitos muito simples, mas com grandes resultados.
+		</p>
+		<form>
+			<label>Nome</label>
+			<br>
+			<input></input>
+			<br>
+			<br>
+			<label>Email</label>
+			<br>
+			<input></input>
+			<br>
+			<br>
+			<label>Telefone</label>
+			<br>
+			<input></input>
+			<br>
+			<br>
+			<label>Mensagem</label>
+			<br>
+			<textarea></textarea>
+			<br>
+			<br>
+			<%=link_to image_tag("bt_enviar.png", :class=>"bt_enviar"), "#" %>
+		</form>
+	</div><!-- Box_right end -->
+	<div class="clear"></div>
+</div><!-- Content end -->

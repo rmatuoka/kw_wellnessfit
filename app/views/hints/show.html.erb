@@ -1,2 +1,20 @@
-<h1>Hints#show</h1>
-<p>Find me in app/views/hints/show.html.erb</p>
+<%content_for :title do%>
+	Dicas
+<%end%>
+<%content_for :head do %>
+	<%#= stylesheet_link_tag "cases" %>
+	<%#=javascript_include_tag "showcases.js"%>
+<%end%>
+<div id="Content">
+	<div id="Box_left">
+		<%=image_tag ("img_dicas.png", :class=>"Img_align") %>
+	</div><!-- Box_left end -->
+	<div id="Box_right">
+		<span class="Breadcrumb"><span class="Breadcrumb"><a href="#">wellness fit</a></span> : <span class="Breadcrumb"><a href="#">dicas</a></span></span>
+		<h1 class="Title_internal_box_right">Dicas</h1><br />
+		<p class="Text_internal_box_right">
+			Conheça as melhores dicas para aumentar seu rendimento e diminuir a fadiga que a rotina pode causar. Alivie o estresse e aproveite melhor o tempo no trabalho com exercícios e hábitos muito simples, mas com grandes resultados.
+		</p>
+	</div><!-- Box_right end -->
+	<div class="clear"></div>
+</div><!-- Content end -->

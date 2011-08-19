@@ -1,2 +1,38 @@
-<h1>Cases#index</h1>
-<p>Find me in app/views/cases/index.html.erb</p>
+<%content_for :title do%>
+	Cases
+<%end%>
+<%content_for :head do %>
+	<%= stylesheet_link_tag "cases" %>
+	<%#=javascript_include_tag "showcases.js"%>
+<%end%>
+<div id="Content">
+	<div id="Box_cases">
+		<span class="Breadcrumb"><span><%=link_to "wellness fit","#" %></span> : <span><%=link_to "cases","#" %></span></span>
+		<h1 class="Title_main_cases">Cases</h1>
+		<span class="Title_cases">Título do Case</span>
+		<div id="Featured_cases">
+			<div id="Buttom_left"><%=link_to image_tag ("img_arrowfeature_left.png" ,:width=>"118",:height=>"181"), "#"%></div>
+			<%=image_tag ("img_feature_preview.png" ,:width=>"938",:height=>"283")%>
+			<div id="Buttom_right"><%=link_to image_tag ("img_arrowfeature_right.png" ,:width=>"118",:height=>"181"),"#"%></div>
+		</div>
+		<br /><br />
+		<p class="Text_cases">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis enim eget massa ultricies bibendum. Nunc eget velit ac ligula vehicula auctor nec eget metus. Vivamus congue auctor tempor. Sed consequat ligula at velit luctus vel accumsan arcu ultrices. Quisque sed nisl quis dolor accumsan iaculis a eu ante. Fusce at vehicula est. Phasellus est dui, tincidunt vitae fringilla a, rutrum at massa. Praesent viverra velit a dolor fringilla pellentesque. Suspendisse vitae consectetur urna. Suspendisse potenti. Mauris facilisis blandit egestas. Donec a nunc neque, blandit vehicula quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+		</p>
+		<br />
+		<p class="Text_cases">
+			Nulla suscipit ultricies elementum. Integer lorem dui, semper vitae porta non, ultricies in est. Donec placerat, libero nec venenatis interdum, dui nisl posuere diam, gravida tempor metus erat non justo. Morbi auctor vestibulum mi eu adipiscing. Donec vitae orci sem. Pellentesque condimentum rutrum dui, non molestie lorem interdum non. Proin sed posuere urna. In sed tellus nec massa ultrices pellentesque nec a metus. Phasellus suscipit euismod placerat. <%=link_to "Aliquam nec nisi nisl, in rutrum metus.","#" %>		
+		</p>
+		<br /><br /><br />
+		<div id="Cases_gallery">
+		<div id="Buttom_galery_left"><%=link_to image_tag ("img_arrowleft.png" ,:width=>"81",:height=>"123"),"#"%></div>
+		<div id="Galery_place_photos">
+			<div class="Item_galeria0">
+				<div class="Photo"><%=link_to image_tag ("img_photo_preview.jpg" ,:width=>"138",:height=>"120"),"#"%></div>
+			</div>
+		</div>
+		<div id="Buttom_galery_right"><%=link_to image_tag ("img_arrowright.png" ,:width=>"81",:height=>"123"),"#"%></div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div><!-- Content end -->

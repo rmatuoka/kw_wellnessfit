@@ -1,0 +1,117 @@
+@charset "utf-8";
+#Box_cases
+{
+	position:relative;
+	top:50px;
+	left:0px;
+	width:938px;
+	min-height:800px;
+	height:auto;
+}
+.Title_main_cases
+{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:24px;
+	font-weight:normal;
+	color:#0066cc;	
+	border-bottom:#ff9933 2px solid;
+	line-height:40px;
+}
+.Title_cases
+{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:18px;
+	font-weight:normal;
+	color:#ff9933;
+    line-height:45px;	
+}
+.Text_cases
+{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#000;
+    line-height:15px;
+    text-align:justify;	
+}
+	#Featured_cases
+	{
+		position:relative;
+		width:938px;
+		height:282px;
+		display:block;
+		
+	}
+		 #Buttom_left
+		 {
+			position:absolute;
+			top:50px;
+			left:0px;			
+			width:118px;
+			height:181px;
+			text-align:center;
+		 }
+		  #Buttom_right
+		 {
+			position:absolute;
+			top:50px;
+			left:819px;
+			width:118px;
+			height:181px;
+			text-align:center;
+		 }
+#Cases_gallery
+{
+	position:relative;
+	width:938px;
+	height:123px;
+}	
+		#Buttom_galery_left
+		{
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:81px;
+			height:123px;
+		}
+		#Buttom_galery_right
+		{
+			position:absolute;
+			top:0px;
+			left:857px;			
+			width:81px;
+			height:123px;
+		}		
+		#Galery_place_photos
+		{
+			position:absolute;
+			top:0px;
+			left:81px;
+			width:776px;
+			height:124px;
+		}	
+			.Item_galeria0
+			{
+				position:relative;
+				top:0px;
+				left:0px;
+				width:142px;
+				height:124px;
+			}			
+			.Item_galeria1
+			{
+				position:relative;
+				top:0px;
+				left:0px;
+				width:142px;
+				height:124px;
+				background:#ff9933; 
+			}	
+				.Photo
+				{
+					position:absolute;
+					top:2px;
+					left:2px;
+					width:138px;
+					height:120px;
+				}				

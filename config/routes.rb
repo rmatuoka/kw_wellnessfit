@@ -20,6 +20,9 @@ KwWellnessfit::Application.routes.draw do
 
   get "clients/index"
 
+  get "cases/index"
+
+  get "cases/show"
 
  resources :home
  resources :ciafisio

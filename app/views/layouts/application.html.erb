@@ -9,6 +9,7 @@
 	</script>
 	<%= csrf_meta_tag %>
 	<%=stylesheet_link_tag "internal" %>
+	<%=javascript_include_tag  "showtab" %>
 	<%=yield :head%>
 </head>
 <body>
@@ -18,17 +19,18 @@
 		<div id="Logo_field">
 			<%=link_to image_tag ("logo.png",:width=>"246", :height=>"98"), root_path %>
 		</div>
-		<div id="Login">
+		<div id="Login" class="hide_tab">
 			<div id="Login_box">
 				<div id="Box_left_login">
-					<div class="Input_login">w</div>
+					<div class="Input_login"><input type="text" name="nome"/></div>
+					<div class="Input_login"><input type="text" name="senha"/></div>
 				</div>
 				<div id="Box_right_login">
-					<%=link_to image_tag ("bt_entrarlogin.png", :width=>"108", :height=>"28"),"#" %><br />
+					<%=link_to image_tag ("bt_entrarlogin.png", :width=>"108", :height=>"28"),"#" %><br /><br />
 					<%=link_to "Esqueceu a senha?","#" %>
 				</div>
 			</div>
-			<div id="Login_tab"><%=link_to image_tag ("bt_logintabarrow.png", :width=>"60", :height=>"10"),"#" %></div>
+			<div id="Login_tab" onclick="show_tab(this)"></div>
 		</div>
 		<div id="Menu">
 		    <ul>

@@ -104,6 +104,7 @@ body
 		}	
 		#Login
 		{
+			display:block;
 			position:relative;
 			background-image:url(../images/bg_logintab.png);
 			background-repeat:no-repeat;
@@ -113,6 +114,10 @@ body
 			min-height:137px;
 			margin:auto;
 			float:right;
+			top:-114px;
+		}
+		.hide_tab
+		{
 		}
 			#Login_box
 			{
@@ -121,35 +126,64 @@ body
 				min-height:117px;
 				margin:auto;
 				float:right;
+				font-family:Tahoma, Geneva, sans-serif;
+				font-weight:normal;
+				font-size:12px;
+				color:#8b8b8b;
 			}
 				#Box_left_login
 				{
 					position:relative;
 					top:20px;
-					left:30px;
+					left:20px;
 					width:109px;
-					min-height:40px;
+					height:40px;
 					float:left;
+					top:30px;
 				}
 					.Input_login
 					{
 						position:relative;
-						background-image:url(../images/bg_input_login.png);
+						background-image:url(../images/bg_input_login.png) !important;
 						background:no-repeat;
 						background-position:center;
 						width:200px;
-						height:42px;
-					}				
+						height:40px;
+					}
+					.Input_login input
+					{
+						width:180px;
+						height:28px;
+						position:relative;
+						top:0px;
+						left:5px;
+						background:none;
+						border:none;
+						font-family:Tahoma, Geneva, sans-serif;
+						font-weight:normal;
+						font-size:12px;
+						color:#8b8b8b !important;
+					}					
 				#Box_right_login
 				{
-					position:relative;
-					top:50px;
-					left:150px;					
-					width:200px;
-					min-height:40px;
+					position:relative;										
+					width:120px;
+					height:40px;
 					margin:auto;
 					float:left;
-				}				
+					text-align:center;					
+					top:35px;
+					left:150px;
+				}
+					#Box_right_login a
+					{
+						background:none;
+						text-decoration:none;
+						font-family:Tahoma, Geneva, sans-serif;
+						font-weight:normal;
+						font-size:12px;
+						color:#8b8b8b;
+					}				
 			#Login_tab
 			{
 				position:relative;
@@ -159,7 +193,16 @@ body
 				float:right;
 				text-align:right;
 				padding-right:17px;
-			}						
+				background-image:url(../images/bt_logintabarrow_0.png);
+				background-repeat:no-repeat;
+				background-position:320px 0px;				
+			}
+			.hide_tab #Login_tab
+			{
+				background-image:url(../images/bt_logintabarrow_1.png);
+				background-repeat:no-repeat;
+				background-position:320px 0px;				
+			}			
 		#Menu
 		{
 			background-image:url(../images/menu/bg_menu.png);

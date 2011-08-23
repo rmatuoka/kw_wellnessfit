@@ -59,12 +59,17 @@ html
 }
 body
 {
+	
+}
+#General_bg_top
+{
 	position:relative;
 	background-image:url(../images/bg_home_top.jpg);
 	background-repeat:no-repeat;
-	background-position:top center;		
+	background-position:top center;	
+	min-width:960px;
 	width:100%;
-	height:100%;	
+	height:100%;
 }
 #General_bg_footer
 {
@@ -102,55 +107,243 @@ body
 		}	
 		#Login
 		{
+			display:block;
+			position:relative;
+			background-image:url(../images/bg_logintab.png);
+			background-repeat:no-repeat;
+			background-position:center top;
 		    position:relative;
-			width:380px;
-			min-height:25px;
+			width:398px;
+			min-height:137px;
 			margin:auto;
 			float:right;
-		}	
-		#Menu
+			top:-114px;
+		}
+		.hide_tab
 		{
-			background-image:url(../images/menu/bg_menu.png);
-			background-repeat:no-repeat;
-			background-position:center;
-			position:absolute;
-			top:160px;
-			left:60px;
-			width:830px;
-			height:49px;
-			margin:auto;
-			border:#b09 1px dashed;
-		}	
-			#Menu ul
+		}
+			#Login_box
 			{
 				position:relative;
-				width:auto;
-				height:auto;
+				width:398px;
+				min-height:117px;
+				margin:auto;
+				float:right;
+				font-family:Tahoma, Geneva, sans-serif;
+				font-weight:normal;
+				font-size:12px;
+				color:#8b8b8b !important;
 			}
-				#Menu li
+				#Box_left_login
 				{
-					display:inline;
-					
-				}						
-					.awelness
-					{	
-					background:#000;
+					position:relative;
+					top:20px;
+					left:20px;
+					width:109px;
+					height:40px;
+					float:left;
+					top:30px;
+				}
+					.Input_login
+					{
+						position:relative;
+						background-image:url(../images/bg_input_login.png) !important;
+						background:no-repeat;
+						background-position:center;
+						width:200px;
+						height:40px;
 					}
-						.awelness a
-						{
-							display:block;	
-							background-image:url(../images/menu/bt_awelness.png);
-							background-repeat:no-repeat;
-							background-position:0px -50px;
-							width:138px;
-							height:49px;
-							text-decoration:none;
-							padding-right:138px;	
-							padding-bottom:40px;
-							*padding-top:17px;  /*ie7*/
-							background:#000;
-												
-						}	
+					.Input_login input
+					{
+						width:180px;
+						height:28px !important;
+						position:relative;
+						top:5px;
+						left:5px;
+						background:none;
+						border:none;
+						font-family:Tahoma, Geneva, sans-serif;
+						font-weight:normal;
+						font-size:12px;
+						color:#8b8b8b !important;
+					}					
+				#Box_right_login
+				{
+					position:relative;										
+					width:120px;
+					height:40px;
+					margin:auto;
+					float:left;
+					text-align:center;					
+					top:35px;
+					left:150px;
+				}
+					#Box_right_login a
+					{
+						background:none;
+						text-decoration:none;
+						font-family:Tahoma, Geneva, sans-serif;
+						font-weight:normal;
+						font-size:12px;
+						color:#8b8b8b;
+					}				
+			#Login_tab
+			{
+				position:relative;
+				width:381px;
+				min-height:13px;
+				margin:auto;
+				float:right;
+				text-align:right;
+				padding-right:17px;
+				background-image:url(../images/bt_logintabarrow_0.png);
+				background-repeat:no-repeat;
+				background-position:320px 0px;				
+			}
+			.hide_tab #Login_tab
+			{
+				background-image:url(../images/bt_logintabarrow_1.png);
+				background-repeat:no-repeat;
+				background-position:320px 0px;				
+			}			
+						
+		#Menu
+		{
+			position:absolute;
+			width:818px;
+			height:140px;
+			margin:auto;
+			top:97px;
+			left:82px;
+			text-align:center;
+		}
+
+				#Menu img
+				{
+					position:relative;
+					top:15px;
+					border:none;
+				}	
+					#Awellnes
+					{
+						position:relative;
+						float:left;
+						background-image:url(../images/bt_hm_awellnes.png);
+						background-repeat:no-repeat;
+						background-position:0px 0px;
+						width:153px;
+						height:64px;
+						top:78px;
+						left:0px;
+					}
+					#Awellnes:hover
+					{
+						background-image:url(../images/bt_hm_awellnes.png);
+						background-repeat:no-repeat;					
+						background-position:0px -65px;
+						cursor:pointer;
+					}
+
+					#Noticias
+					{
+						position:relative;
+						float:left;
+						background-image:url(../images/bt_hm_noticias.png);
+						background-repeat:no-repeat;
+						background-position:0px 0px;
+						width:133px;
+						height:64px;
+						top:63px;
+						left:-8px;
+					}
+					#Noticias:hover
+					{
+						background-image:url(../images/bt_hm_noticias.png);
+						background-repeat:no-repeat;					
+						background-position:0px -64px;
+						cursor:pointer;
+					}	
+					
+					#Glaboral
+					{
+						position:relative;
+						float:left;
+						background-image:url(../images/bt_hm_glaboral.png);
+						background-repeat:no-repeat;
+						background-position:0px 0px;
+						width:133px;
+						height:64px;
+						top:56px;
+						left:-15px;
+					}
+					#Glaboral:hover
+					{
+						background-image:url(../images/bt_hm_glaboral.png);
+						background-repeat:no-repeat;					
+						background-position:0px -68px;
+						cursor:pointer;
+					}
+						
+					#Dicas
+					{
+						position:relative;
+						float:left;
+						background-image:url(../images/bt_hm_dicas.png);
+						background-repeat:no-repeat;
+						background-position:0px 0px;
+						width:133px;
+						height:64px;
+						top:49px;
+						left:-23px;
+					}
+					#Dicas:hover
+					{
+						background-image:url(../images/bt_hm_dicas.png);
+						background-repeat:no-repeat;					
+						background-position:0px -66px;
+						cursor:pointer;
+					}			
+					#Contato
+					{
+						position:relative;
+						float:left;
+						background-image:url(../images/bt_hm_contato.png);
+						background-repeat:no-repeat;
+						background-position:0px 0px;
+						width:133px;
+						height:64px;
+						top:44px;
+						left:-30px;
+					}
+					#Contato:hover
+					{
+						background-image:url(../images/bt_hm_contato.png);
+						background-repeat:no-repeat;					
+						background-position:0px -63px;
+						cursor:pointer;
+					}		
+					#Ciafisio
+					{
+						position:relative;
+						float:left;
+						background-image:url(../images/bt_hm_ciafisio.png);
+						background-repeat:no-repeat;
+						background-position:0px 0px;
+						width:133px;
+						height:64px;
+						top:64px;
+						left:15px;
+					}
+					#Ciafisio:hover
+					{
+						background-image:url(../images/bt_hm_ciafisio.png);
+						background-repeat:no-repeat;					
+						background-position:0px -63px;
+						cursor:pointer;
+					}							
+											
+
+
 	.Align_msaudavel
 	{
 		position:relative;

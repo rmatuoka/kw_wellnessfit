@@ -198,7 +198,8 @@ body
 				padding-right:17px;
 				background-image:url(../images/bt_logintabarrow_0.png);
 				background-repeat:no-repeat;
-				background-position:320px 0px;				
+				background-position:320px 0px;	
+				cursor:pointer;				
 			}
 			.hide_tab #Login_tab
 			{
@@ -358,7 +359,12 @@ body
 		height:350px;
 		margin:auto;
         overflow-x:hidden;	
-	}	
+	}
+	#Content a
+	{
+		color:#0066cc !important;
+		text-decoration:none;
+	}
 	#Box_left
 	{
 		position:relative;

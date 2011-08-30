@@ -16,7 +16,7 @@ KwWellnessfit::Application.routes.draw do
 
   get "contacts/show"
 
-  get "contacts/create"
+  post "contacts/create"
 
   get "clients/index"
 

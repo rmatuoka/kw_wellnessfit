@@ -29,7 +29,6 @@ GEM
       activesupport (= 3.0.3)
     activesupport (3.0.3)
     arel (2.0.10)
-    browser (0.1.2)
     builder (2.1.2)
     cgi_multipart_eof_fix (2.5.0)
     daemons (1.1.2)
@@ -81,7 +80,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  browser
   mail
   mongrel
   mysql2 (< 0.3)

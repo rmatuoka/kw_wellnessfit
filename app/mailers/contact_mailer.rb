@@ -1,9 +1,12 @@
 class ContactMailer < ActionMailer::Base
-  default :from => "CONTATO NAUTILUS<site@nautilus.ind.br>"
+  default :from => "CONTATO WELLNESS FIT<site@wellnessfit.com.br>"
   
-  def enviar(corpo)
-      @Contato = corpo
-      mail(:to => "cnascimento@korewa.com.br", :subject => "Wellnes - Contato via site")
+  def enviar(nome, email, telefone, msg)
+      @Nome = nome
+      @Email = email
+      @Telefone = telefone
+      @Msg = msg
+      mail(:to => "rmatuoka@korewa.com.br", :subject => "Wellnes - Contato via site")
       #mail(:to => @Contato.area, :bbc => @Contato.area, :subject => "Nautilus - Contato via site")
   end
 end

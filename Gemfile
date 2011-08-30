@@ -9,7 +9,7 @@ gem 'mysql2', '< 0.3'
 gem "nifty-generators", :group => :development
 gem 'mail'
 gem 'mongrel'
-gem "browser"
+#gem "browser"
 
 # Use unicorn as the web server
 # gem 'unicorn'

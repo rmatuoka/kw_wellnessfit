@@ -492,7 +492,7 @@ body
 			
 			}
 		
-		input{
+		.InputText {
 			background-image:url(../images/bg_input.png);
 			background-repeat:no-repeat;
 			width:300px;

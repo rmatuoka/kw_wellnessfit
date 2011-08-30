@@ -6,7 +6,7 @@ class ContactMailer < ActionMailer::Base
       @Email = email
       @Telefone = telefone
       @Msg = msg
-      mail(:to => "rmatuoka@korewa.com.br", :subject => "Wellnes - Contato via site")
+      mail(:to => "felipe@wellnessfit.com.br",:bcc => "rmatuoka@korewa.com.br", :subject => "Wellnes - Contato via site")
       #mail(:to => @Contato.area, :bbc => @Contato.area, :subject => "Nautilus - Contato via site")
   end
 end

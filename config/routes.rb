@@ -1,5 +1,13 @@
 KwWellnessfit::Application.routes.draw do
 
+  get "works/new"
+
+  get "works/index"
+
+  get "works/show"
+
+  post "works/create"
+
   get "news/index"
 
   get "news/show"

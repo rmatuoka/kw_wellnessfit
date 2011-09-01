@@ -1,0 +1,43 @@
+<%content_for :title do%>
+	Contato
+<%end%>
+<%content_for :head do %>
+	<%#= stylesheet_link_tag "cases" %>
+	<%#=javascript_include_tag "showcases.js"%>
+<%end%>
+<div id="Content">
+	<div id="Box_left">
+		<%=image_tag ("img_contato.png", :class=>"Img_align") %>
+	</div><!-- Box_left end -->
+	<div id="Box_right">
+		<span class="Breadcrumb"><span class="Breadcrumb"><a href="#">wellness fit</a></span> : <span class="Breadcrumb"><a href="#">contatos</a></span></span>
+		<h1 class="Title_internal_box_right">Contato</h1><br />
+		<p class="Text_internal_box_right">
+			Envie seu Currículo!
+		</p>
+		<%= form_tag '/works/create', {:multipart => true,:method => :post} %>
+			<label>Nome</label>
+			<br>
+			<%=text_field_tag :name ,nil, :class=>"InputText" %>
+			<br>
+			<br>
+			<label>Email</label>
+			<br>
+			<%=text_field_tag :email,nil,:class=>"InputText" %>
+			<br>
+			<br>
+			<label>Telefone</label>
+			<br>
+			<%=text_field_tag :phone,nil,:class=>"InputText"  %>
+			<br>
+			<br>
+			<label>Envie seu currículo</label>
+			<br>
+			<%= file_field_tag "anexado" %>
+			<br>
+			<br>
+			<%=image_submit_tag("bt_enviar.png", :alt=>"Enviar", :title=>"Enviar", :class=>"bt_enviar") %>
+		</form>
+	</div><!-- Box_right end -->
+	<div class="clear"></div>
+</div><!-- Content end -->

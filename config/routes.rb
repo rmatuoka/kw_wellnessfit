@@ -1,13 +1,5 @@
 KwWellnessfit::Application.routes.draw do
 
-  get "works/new"
-
-  get "works/index"
-
-  get "works/show"
-
-  post "works/create"
-
   get "news/index"
 
   get "news/show"
@@ -36,6 +28,7 @@ KwWellnessfit::Application.routes.draw do
  resources :ciafisio
  resources :about
  resources:cases
+ resources :works
  
  root :to => "home#index"
 end

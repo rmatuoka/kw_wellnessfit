@@ -4,6 +4,36 @@
 <%content_for :head do %>
 	<%#= stylesheet_link_tag "cases" %>
 	<%#=javascript_include_tag "showcases.js"%>
+	<%=javascript_include_tag "jquery.validate.min.js"%>
+	<script>
+jQuery(document).ready(function(){
+    	jQuery('#form_works').validate({
+
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            email: {
+                required: true,
+                email: true
+            },
+ 	    phone: {
+                required: true
+            },
+ 	    anexado: {
+                required: true
+            }
+            },
+        messages: {
+            name: "Preencha o seu nome",
+            email: "Preencha seu e-mail de contato",
+            anexado: "Escolha um arquivo com seu curriculo",
+	    phone: "Preencha o seu telefone com sua mensagem "
+        }
+    });
+});
+	</script>
 <%end%>
 <div id="Content">
 	<div id="Box_left">
@@ -15,7 +45,7 @@
 		<p class="Text_internal_box_right">
 			Envie seu Currículo!
 		</p>
-		<%= form_tag '/works/create', {:multipart => true,:method => :post} %>
+		<%= form_tag '/works/create', {:id => "form_works",:method => :post}  %>
 			<label>Nome</label>
 			<br>
 			<%=text_field_tag :name ,nil, :class=>"InputText" %>

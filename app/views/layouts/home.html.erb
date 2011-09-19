@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>Wellness Fit</title>	
+	<title>WellnessFit – O Bem estar em sua melhor forma | Ginástica Laboral e Fisioterapia Corporativa</title>	
 	<%=javascript_include_tag  :defaults %>
 	<%=javascript_include_tag "jquery"%>
 	<script>
@@ -17,7 +17,7 @@
 	<div id="General">
 		<div id="Header">
 			<div id="Logo_field">
-				<a href="#"><%= image_tag ("logo.png",:width=>"246", :height=>"98") %></a>
+				<a href="#"><%= image_tag("logo.png",:width=>"246", :height=>"98")%></a>
 			</div>
 			<div id="Login" class="hide_tab">
 				<div id="Login_box">
@@ -26,7 +26,7 @@
 						<div class="Input_login"><input type="text" name="senha"/></div>
 					</div>
 					<div id="Box_right_login">
-						<%=link_to image_tag ("bt_entrarlogin.png", :width=>"108", :height=>"28"),"#" %><br /><br />
+						<%=link_to image_tag("bt_entrarlogin.png", :width=>"108", :height=>"28"),"#" %><br /><br />
 						<%=link_to "Esqueceu a senha?","#" %>
 					</div>
 				</div>
@@ -40,56 +40,46 @@
 				<div id="Contato"><%=link_to image_tag("png_transhm.png", :width=>"100", :height=>"41"), contacts_new_path%></div>
 				<div id="Ciafisio"><%=link_to image_tag("png_transhm.png", :width=>"100", :height=>"41"), ciafisio_index_path%></div>
 			</div>
-			<%= image_tag ("img_tit_formmaissaudavel.png", :width=>"426",:height=>"111", :class=>"Align_msaudavel")%>
+			<%= image_tag("img_tit_formmaissaudavel.png", :width=>"426",:height=>"111", :class=>"Align_msaudavel")%>
 		</div><!-- Header -->
 		<div id="Content">
 			<div id="Box_left">
-				<h1><%= image_tag ("tit_noticias.png",:width=>"107", :height=>"27") %></h1>
-				<br />
+				<h1><%= image_tag("tit_noticias.png",:width=>"107", :height=>"27") %></h1>
+				<div>
+				<% @Posts.each do |post|%>
 				<div class="Item_noticia">
-					<span class="Data_noticia">08/07/2011<span> - <span class="Nome_noticia"> NOME DA NOTICIA</span>
+					<span class="Data_noticia"><%= post.pubDate.to_date.strftime("%d/%m/%Y")%><span> - <span class="Nome_noticia"> <%= post.title%></span>
 					<p class="Texto_noticia">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - Fonte UOL.  <span class="Leia_mais"><%=link_to "Ler mais","#"%></span> 		
+						<%=	truncate(post.description,:length => 50)%>Fonte <%= @Fonte%>.<span class="Leia_mais"><%=link_to "     Ler mais", post.link, :target=>"_blank"%></span> 		
 					</p>
 				</div>
 				<br />
-				<div class="Item_noticia">
-					<span class="Data_noticia">08/07/2011<span> - <span class="Nome_noticia"> NOME DA NOTICIA</span>
-					<p class="Texto_noticia">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - Fonte UOL.  <span class="Leia_mais"><%=link_to "Ler mais","#"%></span> 		
-					</p>
+				<% end %>
+				<div id="clear"></div>
 				</div>
-				<br />			
-				<div class="Item_noticia">
-					<span class="Data_noticia">08/07/2011<span> - <span class="Nome_noticia"> NOME DA NOTICIA</span>
-					<p class="Texto_noticia">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - Fonte UOL.  <span class="Leia_mais"><%=link_to "Ler mais","#"%></span> 		
-					</p>
-				</div>	
-				<br />
 				<span class="Veja_todas"><%=link_to "[Veja Todas]", news_index_path%></span>	
 				<span class="Align_fcvcmsm"><%=link_to image_tag("tit_facavctambem.png", :width=>"401", :heigh=>"54"),"javascript:alert('Àrea em manutenção. Volte em breve!')"%></span>
 				
 			</div>
 			<div id="Box_right">
-				<h1 class="tit_oqueelaboral"><%= image_tag ("tit_oqueeglaboral.png",:width=>"243", :height=>"18") %></h1>
-				<span class="tit_cliqueaquiedes"><%=link_to image_tag ("tit_vocejacliqueaqui.png",:width=>"286", :height=>"84"),"#" %></span>
+				<h1 class="tit_oqueelaboral"><%= image_tag("tit_oqueeglaboral.png",:width=>"243", :height=>"18") %></h1>
+				<span class="tit_cliqueaquiedes"><%=link_to image_tag("tit_vocejacliqueaqui.png",:width=>"286", :height=>"84"),labors_index_path %></span>
 			</div>	
 		</div><!-- Content end -->
 		<div id="Footer">
 			<div id="Footer_content_box_bg">
 				<div id="Footer_content_box">
-				<%=link_to image_tag ("menu/bt_fhome.png", :width=>"41", :height=>"33"),"#" %>    
-				<%=link_to image_tag ("menu/bt_fawelnessftnes.png", :width=>"98", :height=>"33"),"#" %>
-				<%=link_to image_tag ("menu/bt_fnoticias.png", :width=>"61", :height=>"33"), "#" %>
-				<%=link_to image_tag ("menu/bt_fglaboral.png", :width=>"122", :height=>"33"),"#" %>
-				<%=link_to image_tag ("menu/bt_fdicas.png", :width=>"41", :height=>"33"),"#" %>
-				<%=link_to image_tag ("menu/bt_ftrabalheconosco.png", :width=>"123", :height=>"33"),"#" %>
-				<%=link_to image_tag ("menu/bt_fcontato.png", :width=>"61", :height=>"33"),"#" %>            
+				<%=link_to image_tag("menu/bt_fhome.png", :width=>"41", :height=>"33"),root_path %>    
+				<%=link_to image_tag("menu/bt_fawelnessftnes.png", :width=>"98", :height=>"33"),about_index_path %>
+				<%=link_to image_tag("menu/bt_fnoticias.png", :width=>"61", :height=>"33"), news_index_path %>
+				<%=link_to image_tag("menu/bt_fglaboral.png", :width=>"122", :height=>"33"),labors_index_path %>
+				<%=link_to image_tag("menu/bt_fdicas.png", :width=>"41", :height=>"33"),hints_index_path %>
+				<%=link_to image_tag("menu/bt_ftrabalheconosco.png", :width=>"123", :height=>"33"),root_path %>
+				<%=link_to image_tag("menu/bt_fcontato.png", :width=>"61", :height=>"33"),contacts_new_path %>            
 				</div>
 				<div id="Footer_content_socialnet">
-				<%=link_to image_tag ("img_twitter.png", :width=>"107", :height=>"48"),"#" %>
-				<%=link_to image_tag ("img_facebook.png", :width=>"108", :height=>"49"),"#" %>
+				<%=link_to image_tag("img_twitter.png", :width=>"107", :height=>"48"),"#" %>
+				<%=link_to image_tag("img_facebook.png", :width=>"108", :height=>"49"),"#" %>
 				</div>
 				<p class="Footer_text">Wellness Fit © 2011 - Todos os direitos reservados.</p>
 			</div>

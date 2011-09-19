@@ -1,2 +1,11 @@
-<h1>Ciafisio#show</h1>
-<p>Find me in app/views/ciafisio/show.html.erb</p>
+<div id='blogPosts'>
+			<%#= @Posts%>
+            <h1>Latest blog posts</h1>
+			<% for post in @Posts%>
+				<h4><b><%= post.title%></b></h4>
+				<p class="description"><%=	post.description  %></p>
+				<p><%=link_to "Link", post.link%></p>
+				<p><%= post.pubDate.to_date.strftime("%d/%m/%Y")%></p>
+				<p>Fonte:<%= @Fonte%></p>
+			<%end%>
+</div>

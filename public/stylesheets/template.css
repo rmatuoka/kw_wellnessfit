@@ -386,7 +386,8 @@ body
 	{
 		position:relative;
 		width:450px;
-		height:38px
+		min-height:38px;
+		height:auto;
 	}
 		.Data_noticia
 		{

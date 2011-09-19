@@ -1,5 +1,5 @@
 <%content_for :title do%>
-	Notícias
+	Notícias :: WellnessFit – O Bem estar em sua melhor forma | Ginástica Laboral e Fisioterapia Corporativa
 <%end%>
 <%content_for :head do %>
 	<%#= stylesheet_link_tag "cases" %>
@@ -13,42 +13,37 @@
 		<span class="Breadcrumb"><span class="Breadcrumb"><a href="#">wellness fit</a></span> : <span class="Breadcrumb"><a href="#">notícias</a></span></span>
 		<h1 class="Title_internal_box_right">Notícias</h1><br />
 		<ul>
-			<li class='lista_1'>
-				<h2>08/07/2011 - NOME DA NOTICIA</h2>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - <span class='fonte'>Fonte UOL.</span> <span class='ler_mais'><%=link_to "Ler mais", news_show_path %></span></h3>
+			<% $i = 1 %>
+			<%	@Uol.each do |uol|
+				if ($i == 1)
+					$numero = 1
+					$i = 2
+				else
+					$numero = 2
+					$i = 1					
+				end
+			%>
+			<li class='lista_<%= $numero%>'>
+				<h2><%= uol.pubDate.to_date.strftime("%d/%m/%Y")%> - <%= uol.title%></h2>
+				<h3><%=	uol.description+". - " if !uol.description == "" %><span class='fonte'>Fonte UOL.</span> <span class='ler_mais'><%=link_to "Ler mais", uol.link, :target=>"_blank"%></span></h3>
 			</li>
-			<li class='lista_2'>
-				<h2>08/07/2011 - NOME DA NOTICIA</h2>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - <span class='fonte'>Fonte UOL.</span> <span class='ler_mais'><a href='#'>Ler mais</a></span></h3>
+			<% end %>
+			
+			
+			<% @Paho.each do |paho|
+				if ($i == 1)
+					$numero = 1
+					$i = 2
+				else
+					$numero = 2
+					$i = 1					
+				end
+			%>
+			<li class='lista_<%= $numero%>'>
+				<h2><%= paho.pubDate.to_date.strftime("%d/%m/%Y")%> - <%= paho.title%></h2>
+				<h3><%=	paho.description+". - " if !paho.description == "" %><span class='fonte'>Fonte Organização Pan-Americana da saúde.</span> <span class='ler_mais'><%=link_to "Ler mais", paho.link, :target=>"_blank"%></span></h3>
 			</li>
-			<li class='lista_1'>
-				<h2>08/07/2011 - NOME DA NOTICIA</h2>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - <span class='fonte'>Fonte UOL.</span> <span class='ler_mais'><a href='#'>Ler mais</a></span></h3>
-			</li>
-			<li class='lista_2'>
-				<h2>08/07/2011 - NOME DA NOTICIA</h2>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - <span class='fonte'>Fonte UOL.</span> <span class='ler_mais'><a href='#'>Ler mais</a></span></h3>
-			</li>
-			<li class='lista_1'>
-				<h2>08/07/2011 - NOME DA NOTICIA</h2>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - <span class='fonte'>Fonte UOL.</span> <span class='ler_mais'><a href='#'>Ler mais</a></span></h3>
-			</li>
-			<li class='lista_2'>
-				<h2>08/07/2011 - NOME DA NOTICIA</h2>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - <span class='fonte'>Fonte UOL.</span> <span class='ler_mais'><a href='#'>Ler mais</a></span></h3>
-			</li>
-			<li class='lista_1'>
-				<h2>08/07/2011 - NOME DA NOTICIA</h2>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - <span class='fonte'>Fonte UOL.</span> <span class='ler_mais'><a href='#'>Ler mais</a></span></h3>
-			</li>
-			<li class='lista_2'>
-				<h2>08/07/2011 - NOME DA NOTICIA</h2>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - <span class='fonte'>Fonte UOL.</span> <span class='ler_mais'><a href='#'>Ler mais</a></span></h3>
-			</li>
-			<li class='lista_1'>
-				<h2>08/07/2011 - NOME DA NOTICIA</h2>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere condimentum felis, vel luctus massa suscipit nec. Nullam eget augue elit. - <span class='fonte'>Fonte UOL.</span> <span class='ler_mais'><a href='#'>Ler mais</a></span></h3>
-			</li>
+			<% end %>			
 		</ul>
 	</div><!-- Box_right end -->
 	<div class="clear"></div>

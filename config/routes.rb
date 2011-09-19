@@ -27,7 +27,7 @@ KwWellnessfit::Application.routes.draw do
  resources :home
  resources :ciafisio
  resources :about
- resources:cases
+ resources :cases
  resources :works
  
  root :to => "home#index"

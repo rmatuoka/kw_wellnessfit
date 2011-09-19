@@ -8,6 +8,7 @@ class ContactsController < ApplicationController
   end
 
   def show
+    redirect_to contacts_new_path
   end
 
   def create

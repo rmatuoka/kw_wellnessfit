@@ -131,7 +131,7 @@ body
 			position:absolute;
 			left:90px;
 			top:186px;
-			width:766px;
+			width:861px;
 			height:35px;
 			margin:auto;
 			*height:34px;
@@ -314,6 +314,14 @@ body
 			color:#2b7345;
 			margin-top:10px;
 		}
+		.Title_internal_box_right_medium	
+		{
+			font-family:Tahoma, Geneva, sans-serif;
+			font-size:18px;
+			font-weight:normal;
+			color:#2b7345;
+			margin-top:10px;
+		}		
 		.Text_internal_box_right	
 		{
 			font-family:Tahoma, Geneva, sans-serif;

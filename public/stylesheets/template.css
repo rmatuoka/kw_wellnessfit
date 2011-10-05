@@ -211,11 +211,11 @@ body
 		#Menu
 		{
 			position:absolute;
-			width:818px;
+			width:980px;
 			height:140px;
 			margin:auto;
 			top:97px;
-			left:82px;
+			left:0px;
 			text-align:center;
 		}
 
@@ -231,17 +231,17 @@ body
 						float:left;
 						background-image:url(../images/bt_hm_awellnes.png);
 						background-repeat:no-repeat;
-						background-position:0px 0px;
+						background-position:0px -2px;
 						width:153px;
-						height:64px;
-						top:78px;
-						left:0px;
+						height:71px;
+						top:85px;
+						left:-17px;
 					}
 					#Awellnes:hover
 					{
 						background-image:url(../images/bt_hm_awellnes.png);
 						background-repeat:no-repeat;					
-						background-position:0px -65px;
+						background-position:0px -74px;
 						cursor:pointer;
 					}
 
@@ -254,8 +254,8 @@ body
 						background-position:0px 0px;
 						width:133px;
 						height:64px;
-						top:63px;
-						left:-8px;
+						top:70px;
+						left:-17px;
 					}
 					#Noticias:hover
 					{
@@ -274,8 +274,8 @@ body
 						background-position:0px 0px;
 						width:133px;
 						height:64px;
-						top:56px;
-						left:-15px;
+						top:60px;
+						left:-20px;
 					}
 					#Glaboral:hover
 					{
@@ -294,8 +294,8 @@ body
 						background-position:0px 0px;
 						width:133px;
 						height:64px;
-						top:49px;
-						left:-23px;
+						top:50px;
+						left:-25px;
 					}
 					#Dicas:hover
 					{
@@ -303,24 +303,43 @@ body
 						background-repeat:no-repeat;					
 						background-position:0px -66px;
 						cursor:pointer;
-					}			
+					}	
+					#Links
+					{
+						position:relative;
+						float:left;
+						background-image:url(../images/bt_hm_links.png);
+						background-repeat:no-repeat;
+						background-position:0px 0px;
+						width:133px;
+						height:64px;
+						top:47px;
+						left:-28px;
+					}
+					#Links:hover
+					{
+						background-image:url(../images/bt_hm_links.png);
+						background-repeat:no-repeat;					
+						background-position:0px -67px;
+						cursor:pointer;
+					}					
 					#Contato
 					{
 						position:relative;
 						float:left;
 						background-image:url(../images/bt_hm_contato.png);
 						background-repeat:no-repeat;
-						background-position:0px 0px;
+						background-position:0px 2px;
 						width:133px;
 						height:64px;
-						top:44px;
-						left:-30px;
+						top:43px;
+						left:-31px;
 					}
 					#Contato:hover
 					{
 						background-image:url(../images/bt_hm_contato.png);
 						background-repeat:no-repeat;					
-						background-position:0px -63px;
+						background-position:0px -62px;
 						cursor:pointer;
 					}		
 					#Ciafisio
@@ -332,8 +351,8 @@ body
 						background-position:0px 0px;
 						width:133px;
 						height:64px;
-						top:64px;
-						left:15px;
+						top:67px;
+						left:0px;
 					}
 					#Ciafisio:hover
 					{
@@ -486,6 +505,7 @@ body
 			font-weight:normal;
 			color:#0979be;
 		}
+		
 		.Text_internal_box_right	
 		{
 			font-family:Tahoma, Geneva, sans-serif;

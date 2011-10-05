@@ -29,6 +29,8 @@ KwWellnessfit::Application.routes.draw do
  resources :about
  resources :cases
  resources :works
+ resources :links
+ 
  
  root :to => "home#index"
 end

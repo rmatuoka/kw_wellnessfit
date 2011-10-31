@@ -282,14 +282,23 @@
 			color:#999999;
 			font-size:12px;
 			font-weight:normal;
+		}
+		#General #Content #Right_box #Box_form
+		{
+			width: 600px;
+			margin: auto;
 		}						
-			#General #Content #Right_box form
-			{
-				position:relative;
-				display:block;
-				padding:33px 0px 10px 33px;
-				text-align:center;
-			}			
+		#General #Content #Right_box form
+		{
+			position:relative;
+			display:block;
+			padding:33px 0px 10px 33px;
+			text-align:right;
+		}			
+		#General #Content #Right_box form p
+		{
+			margin-bottom:10px;
+		}
 		#General #Content #Right_box h1
 		{
 			position:relative;
@@ -356,7 +365,7 @@
 		#General #Content #Right_box form input
 		{
 			position:relative;
-			width:400px;
+			width:390px;
 			height:27px;
 			font-family:Verdana, Geneva, sans-serif;
 			font-size:12px;
@@ -368,7 +377,25 @@
 			-webkit-border-radius: 10px; /* Implementação para browsers que renderizam via webkit */
 			behavior: url(PIE.htc);/* Comportamento adicionado para renderização das prop no ie7 e 8*/
 			background:#EEE;
+			padding:0px 5px 0px 5px;
 		}	
+		#General #Content #Right_box form .input_radio
+		{
+			position:relative;
+			width: 15px;
+			height: 15px;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#999;
+			border:none;
+			border-radius: 10px; /* Implementação W3C */
+			-moz-border-radius: 10px; /* Implementação Mozilla */
+			-webkit-border-radius: 10px; /* Implementação para browsers que renderizam via webkit */
+			behavior: url(PIE.htc);/* Comportamento adicionado para renderização das prop no ie7 e 8*/
+			background:#EEE;
+			margin-left:15px;
+		}		
 		#General #Content #Right_box #Select
 		{
 			position:relative;
@@ -383,27 +410,28 @@
 			-moz-border-radius: 10px; /* Implementação Mozilla */
 			-webkit-border-radius: 10px; /* Implementação para browsers que renderizam via webkit */
 			behavior: url(PIE.htc);/* Comportamento adicionado para renderização das prop no ie7 e 8*/
-			background:#EEE;;	
+			background:#EEE;
 			cursor: pointer;
 		}		
 		#General #Content #Right_box textarea
 		{
-			position:relative;
-        	width:220px;
-			height:158px;	
-			margin-left:35px;
-			font-family:Verdana, Geneva, sans-serif;
-			font-size:12px;
-			font-weight:normal;
-			color:#999;
+			position: relative;
+			width: 380px;
+			height: 143px;
+			margin-left: 35px;
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 12px;
+			font-weight: normal;
+			color: #999;
 			cursor: pointer;
-			border-radius: 10px; /* Implementação W3C */
-			-moz-border-radius: 10px; /* Implementação Mozilla */
-			-webkit-border-radius: 10px; /* Implementação para browsers que renderizam via webkit */
-			behavior: url(PIE.htc);/* Comportamento adicionado para renderização das prop no ie7 e 8*/
-			background:#EEE;;;
+			border-radius: 10px;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			behavior: url(PIE.htc);
+			background: #EEE;
+			padding: 10px 10px 5px 10px;
 		}	
-		#General #Content #Right_box .Bt_enviar
+		*#General #Content #Right_box .Bt_enviar
 		{
 			position:relative;
         	width:102px;

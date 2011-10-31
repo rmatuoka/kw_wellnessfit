@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
       @role = :admin
     elsif self.has_role? :supervisor
       @role = :supervisor
+    elsif self.has_role? :empresario
+      @role = :empresario
     elsif self.has_role? :user
       @role = :user
     end

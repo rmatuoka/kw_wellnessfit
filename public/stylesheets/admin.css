@@ -105,6 +105,26 @@
 			min-height:800px;
 			height:auto;
 		}
+		#General #Content #Left_box .Bt_enviar_left
+		{
+			position:relative;
+        	width:102px;
+			height:32px;	
+		/*	margin-left:152px;*/
+			cursor: pointer;
+			border-radius: 10px;
+			background:#999;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:bold;
+			color:#fff;
+			background: linear-gradient(#D6D6D6, #2F2F2F 70%); /* Implementação W3C */
+			background: -moz-linear-gradient(#D6D6D6, #2F2F2F 70%); /* Implementação Mozilla */
+			background: -webkit-gradient(linear, 0 0, 0 70%, from(#D6D6D6), to(#2F2F2F));/* Implementação para browsers que renderizam via webkit */
+			-pie-background: linear-gradient(#D6D6D6, #2F2F2F 70%); /*Propriedade adicionada para renderização das propriedades acima no IE 7 e IE 8 */
+			background: url (image.png) repeat-x 0px 0px; /* Background com imagem para degradê para o Opera 10 */
+			cursor:pointer;
+		}
 	
 			#General #Content #Left_box #Item_category
 			{
@@ -431,7 +451,7 @@
 			background: #EEE;
 			padding: 10px 10px 5px 10px;
 		}	
-		*#General #Content #Right_box .Bt_enviar
+		#General #Content #Right_box .Bt_enviar
 		{
 			position:relative;
         	width:102px;

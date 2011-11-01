@@ -1,0 +1,42 @@
+<% title @company.fantasy_name %>
+<%content_for :head do%>
+	<%= stylesheet_link_tag "information"%>
+<%end%>
+
+<h1><%= @company.company_name %></h1><br />
+<p>Bem-vindo ao painel de controle da <%=@company.fantasy_name %>. Clicando nas opções abaixo você poderá atualizar as informações referentes a este cliente.</p>
+<div id="options">
+	
+	
+	<div class="box_options">
+		<%=link_to(image_tag("logo_cia.png"), [:admin, @company])%>
+		<br />
+		<p><%=link_to("Informações",[:admin, @company]) %></p>
+	</div>
+
+	<div class="box_options">
+		<%=link_to(image_tag("logo_cia.png"), [:admin, @company])%>
+		<br />
+		<p><%=link_to("Setores",[:admin, @company]) %></p>
+	</div>
+	
+	<div class="box_options">
+		<%=link_to(image_tag("logo_cia.png"), [:admin, @company])%>
+		<br />
+		<p><%=link_to("Funcionários",[:admin, @company]) %></p>
+	</div>		
+	
+	<div class="box_options">
+		<%=link_to(image_tag("logo_cia.png"), [:admin, @company])%>
+		<br />
+		<p><%=link_to("Listas de Chamada",[:admin, @company]) %></p>
+	</div>
+	
+	<div class="box_options">
+		<%=link_to(image_tag("logo_cia.png"), [:admin, @company])%>
+		<br />
+		<p><%=link_to("Relatórios",[:admin, @company]) %></p>
+	</div>
+	
+	<div class="clear"></div>
+</div>

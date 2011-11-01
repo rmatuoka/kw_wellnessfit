@@ -1,8 +1,8 @@
 class Admin::StaticContentsController < ApplicationController  
   access_control do
-      allow :admin, :supervisor
+      allow :admin, :supervisor, :empresario
   end
-  before_filter :permission_check
+  before_filter :permission_check 
   
   layout "inadmin"  
     

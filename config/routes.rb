@@ -27,7 +27,11 @@ KwWellnessfit::Application.routes.draw do
  
  #Inicio do namespace Admin
  namespace(:admin){
-   resources :companies
+   resources :companies do
+     member do
+       get 'information'
+     end
+   end
    resources :static_contents
    resources :users do
      collection do

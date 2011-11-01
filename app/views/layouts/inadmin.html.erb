@@ -17,7 +17,7 @@ jQuery.noConflict();
 			<div id="User_bar">
 				<div id="User_bar_content">
 					<div id="User_name">
-						<%= link_to image_tag("img_house.png", :width=>"28", :height=>"23", :class=>"Usr_bt_align"), root_path%><span>Bem Vindo, <%= current_user.name %></span>
+						<%= link_to image_tag("img_house.png", :width=>"28", :height=>"23", :class=>"Usr_bt_align"), admin_root_path%><span>Bem Vindo, <%= current_user.name %></span>
 					</div>
 					<div id="Buttons">
 						<%= link_to(image_tag("bt_config.png", :width=>"22", :height=>"22") , edit_user_path(:current), :class => "Usr_bt_align") %>
@@ -37,14 +37,14 @@ jQuery.noConflict();
 						<ul id="menu">
 							<li class="parent"><a href="#" title=""><h3>Empresas</h3></a>
 								<ul class="sub-menu">
-									<% if (!@mcompanies.blank?)%>
-									<li>Empresa 1</li>
-									<li>Empresa 2</li>
-									<li>Empresa 3</li>
-									<li>Empresa 4</li>
-									<li>Empresa 5</li>
+									<% if (!@mcompanies.blank?)
+										@mcompanies.each do |empresa|%>
+									<li><%= link_to empresa.fantasy_name, information_admin_company_path(empresa)%></li>
+									<%	end
+									else%>
+									<li>Não existe empresas cadastradas!</li>
 									<%end%>
-									<%= submit_tag "Voltar",:type=>"reset", :class => "Bt_enviar"%>
+									<%= (submit_tag "+ Criar nova",:type=>"Button", :class => "Bt_enviar_left", :onclick=>"window.open('"+new_admin_company_path+"','_self');") if (current_user.role == :admin)%>
 								</ul>
 							</li>
 

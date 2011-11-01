@@ -1,11 +1,17 @@
 class Admin::CompaniesController < ApplicationController
   layout "inadmin"
+  access_control do
+      allow :admin 
+      allow :supervisor, :empresario, :to =>[:show, :information]
+  end
+  before_filter :permission_check 
 
   def index
     @companies = Company.all
+    #redirect_to admin_root_path
   end
 
-  def show
+  def show  
     @company = Company.find(params[:id])
   end
 
@@ -39,5 +45,9 @@ class Admin::CompaniesController < ApplicationController
     @company = Company.find(params[:id])
     @company.destroy
     redirect_to admin_companies_url, :notice => "Successfully destroyed company."
+  end
+  
+  def information
+    @company = Company.find(params[:id])
   end
 end

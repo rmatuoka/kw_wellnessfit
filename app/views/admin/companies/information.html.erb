@@ -9,33 +9,33 @@
 	
 	
 	<div class="box_options">
-		<%=link_to(image_tag("logo_cia.png"), [:admin, @company])%>
+		<%=link_to(image_tag("bt_adm_info.jpg"), [:admin, @company])%>
 		<br />
 		<p><%=link_to("Informações",[:admin, @company]) %></p>
 	</div>
 
 	<div class="box_options">
-		<%=link_to(image_tag("logo_cia.png"), [:admin, @company])%>
+		<%=link_to(image_tag("bt_adm_setores.jpg"), admin_company_sectors_path(@company))%>
 		<br />
-		<p><%=link_to("Setores",[:admin, @company]) %></p>
+		<p><%=link_to("Setores",admin_company_sectors_path(@company)) %></p>
 	</div>
 	
 	<div class="box_options">
-		<%=link_to(image_tag("logo_cia.png"), [:admin, @company])%>
+		<%=link_to(image_tag("bt_adm_func.jpg"), admin_company_functionaries_path(@company))%>
 		<br />
-		<p><%=link_to("Funcionários",[:admin, @company]) %></p>
+		<p><%=link_to("Funcionários",admin_company_functionaries_path(@company)) %></p>
 	</div>		
 	
 	<div class="box_options">
-		<%=link_to(image_tag("logo_cia.png"), [:admin, @company])%>
+		<%=link_to(image_tag("bt_adm_lista.jpg"),"#", :onclick=>"alert('Este recurso está sendo desenvovido')")%>
 		<br />
-		<p><%=link_to("Listas de Chamada",[:admin, @company]) %></p>
+		<p><%=link_to("Listas de Chamada","#", :onclick=>"alert('Este recurso está sendo desenvovido')") %></p>
 	</div>
 	
 	<div class="box_options">
-		<%=link_to(image_tag("logo_cia.png"), [:admin, @company])%>
+		<%=link_to(image_tag("bt_adm_relatorio.jpg"),"#", :onclick=>"alert('Este recurso está sendo desenvovido')")%>
 		<br />
-		<p><%=link_to("Relatórios",[:admin, @company]) %></p>
+		<p><%=link_to("Relatórios","#", :onclick=>"alert('Este recurso está sendo desenvovido')") %></p>
 	</div>
 	
 	<div class="clear"></div>

@@ -1,0 +1,35 @@
+<div id="Box_form">
+	<%= form_for ([:admin, @company, @functionary]) do |f| %>
+	  <%= f.error_messages %>
+	  <p>
+	    <%= f.label :sector_id %>
+		<%= f.collection_select :sector_id,@setores,:id,:name %>
+	  </p>
+	  <p>
+	    <%= f.label :name, "Nome" %>
+	    <%= f.text_field :name %>
+	  </p>
+	  <p>
+	    <%= f.label :internal_code, "Código Interno"%>
+	    <%= f.text_field :internal_code %>
+	  </p>
+	  <p>
+	    <%= f.label :sex, "Sexo"%>
+		<%= f.radio_button :sex, true, :class=>"input_radio" %>Masculino
+		<%= f.radio_button :sex, false, :class=>"input_radio" %>Feminino
+	  </p>	
+	  <p>
+	    <%= f.label :active, "Ativo?"%>
+	    <%= f.check_box :active  %>
+	  </p>
+	  <p>
+	    <%= f.label :inactivation_date, "Data em que ficou Inativo"%>
+	    <%= f.date_select :inactivation_date %>
+	  </p>
+	  <p>
+	    <%= f.label :reason, "Razão"%><br />
+	    <%= f.text_area :reason%>
+	  </p><br />
+  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_functionaries_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+	<% end %>
+</div>

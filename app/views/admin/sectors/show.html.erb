@@ -1,0 +1,24 @@
+<% title @company.company_name+" - "+ @sector.name %>
+
+<h1><%= @company.company_name %> - <%=@sector.name%></h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+  <strong>Nome:</strong>
+  <%= @sector.name %>
+</p>
+<p>
+  <strong>Descrição:</strong>
+  <%= @sector.description %>
+</p>
+<p>
+  <strong>Ativo?</strong>
+  <%= print_active(@sector.active) %>
+</p>
+<br />
+<br />
+<br />
+<p>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_sectors_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+</p>

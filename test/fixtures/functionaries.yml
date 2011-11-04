@@ -1,0 +1,19 @@
+one:
+  company_id: 1
+  sector_id: 1
+  name: MyString
+  internal_code: MyString
+  active: false
+  inactivation_date: 2011-11-01
+  reason: MyText
+  sex: false
+
+two:
+  company_id: 1
+  sector_id: 1
+  name: MyString
+  internal_code: MyString
+  active: false
+  inactivation_date: 2011-11-01
+  reason: MyText
+  sex: false

@@ -15,7 +15,11 @@
   <%= @user.email %>
 </p>
 <p>
-  <%= link_to "Edit", edit_admin_user_path(@user) %> |
-  <%= link_to "Destroy", admin_user_path(@user), :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", admin_users_path %>
+  <strong>Nivel:</strong>
+  <%= @user.role %>
+</p>
+<br />
+<br />
+<p>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_users_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
 </p>

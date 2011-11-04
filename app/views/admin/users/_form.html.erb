@@ -30,6 +30,6 @@
 			<%= f.radio_button :role, :user %>Usuário<br/>			
 		  </p><br />
 		</div>
-  		<p><%= f.submit "Atualizar", :class => "Bt_enviar" %></p>
+  		<p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_users_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%><%= f.submit "Atualizar", :class => "Bt_enviar" %></p>
 		<%end%>
 	</div>

@@ -118,6 +118,6 @@
     <%= f.label :agreement, "Convênio médico. Qual?" %><br />
     <%= f.text_area :agreement %>
   </p>
-  <p><%= submit_tag "Voltar",:type=>"reset",:onclick=>"voltaConteudo()", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_root_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
 <% end %>
 </div>

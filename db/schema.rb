@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111026130715) do
+ActiveRecord::Schema.define(:version => 20111101131710) do
+
+  create_table "bouts", :force => true do |t|
+    t.integer  "company_id"
+    t.string   "name"
+    t.text     "description"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "companies", :force => true do |t|
     t.string   "company_name"
@@ -46,6 +55,19 @@ ActiveRecord::Schema.define(:version => 20111026130715) do
     t.datetime "updated_at"
   end
 
+  create_table "functionaries", :force => true do |t|
+    t.integer  "company_id"
+    t.integer  "sector_id"
+    t.string   "name"
+    t.string   "internal_code"
+    t.boolean  "active"
+    t.date     "inactivation_date"
+    t.text     "reason"
+    t.boolean  "sex"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "roles", :force => true do |t|
     t.string   "name",              :limit => 40
     t.string   "authorizable_type", :limit => 40
@@ -57,6 +79,15 @@ ActiveRecord::Schema.define(:version => 20111026130715) do
   create_table "roles_users", :id => false, :force => true do |t|
     t.integer  "user_id"
     t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sectors", :force => true do |t|
+    t.integer  "company_id"
+    t.string   "name"
+    t.text     "description"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

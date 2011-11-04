@@ -9,8 +9,11 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-     flash[:error] = "" 
+      if (User.find(@user_session.user).has_role? :admin)
+        @admin = true
+      end
     else
+      @admin = false
       flash[:error] = "Usuário e/ou senha inválidos!"
     end
   end

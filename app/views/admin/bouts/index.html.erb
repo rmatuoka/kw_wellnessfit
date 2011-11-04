@@ -1,0 +1,23 @@
+<% title "Admin/Bouts" %>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Active</th>
+  </tr>
+  <% for bout in @bouts %>
+    <tr>
+      <td><%= bout.company_id %></td>
+      <td><%= bout.name %></td>
+      <td><%= bout.description %></td>
+      <td><%= bout.active %></td>
+      <td><%= link_to "Show", [:admin, bout] %></td>
+      <td><%= link_to "Edit", edit_admin_bout_path(bout) %></td>
+      <td><%= link_to "Destroy", [:admin, bout], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Admin/Bout", new_admin_bout_path %></p>

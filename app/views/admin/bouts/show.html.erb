@@ -1,0 +1,24 @@
+<% title "Admin/Bout" %>
+
+<p>
+  <strong>Company:</strong>
+  <%= @bout.company_id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @bout.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @bout.description %>
+</p>
+<p>
+  <strong>Active:</strong>
+  <%= @bout.active %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_bout_path(@bout) %> |
+  <%= link_to "Destroy", [:admin, @bout], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_bouts_path %>
+</p>

@@ -1,0 +1,123 @@
+<div id="Box_form">
+<%= form_for [:admin, @company] do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :company_name, "Razão Social: "%>
+    <%= f.text_field :company_name %>
+  </p>
+  <p>
+    <%= f.label :fantasy_name, "Nome Fantasia: "%>
+    <%= f.text_field :fantasy_name %>
+  </p>
+  <p>
+    <%= f.label :cnpj, "CNPJ: "%>
+    <%= f.text_field :cnpj %>
+  </p>
+  <p>
+    <%= f.label :phone, "Telefone: "%>
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :address, "Endereço: "%>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :district, "Bairro: "%>
+    <%= f.text_field :district %>
+  </p>
+  <p>
+    <%= f.label :city, "Cidade: "%>
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state, "Estado: "%>
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip_code, "CEP: "%>
+    <%= f.text_field :zip_code %>
+  </p>
+  <p>
+    <%= f.label :responsible, "Responsável: "%>
+    <%= f.text_field :responsible %>
+  </p>
+  <p>
+    <%= f.label :segment, "Segmento: "%>
+    <%= f.text_field :segment %>
+  </p>
+  <p>
+    <%= f.label :date_visit, "Data da Visita: "%>
+    <%= f.date_select :date_visit %>
+  </p>
+  <p>
+    <%= f.label :email, "E-mail: "%>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :electronic_address, "Endereço Eletrônico: "%>
+    <%= f.text_field :electronic_address %>
+  </p>
+  <p>
+    <%= f.label :doctor, "Médico do Trabalho: " %>
+    <%= f.text_field :doctor %>
+  </p>
+  <p>
+    <%= f.label :nurse, "Enfermeira do Trabalho: " %>
+    <%= f.text_field :nurse %>
+  </p>
+  <p>
+    <%= f.label :security, "Segurança do Trabalho: " %>
+    <%= f.text_field :security %>
+  </p>
+  <p>
+    <%= f.label :engineering, "Engenharia: " %>
+    <%= f.text_field :engineering %>
+  </p>
+  <p>
+    <%= f.label :rh_responsible, "Responsável: " %>
+    <%= f.text_field :rh_responsible %>
+  </p>
+  <p>
+    <%= f.label :rh_contact, "Contato: " %>
+    <%= f.text_field :rh_contact %>
+  </p>
+  <p>
+    <%= f.label :gymnastics, "Ginástica Laboral: " %>
+	<%= f.radio_button :gymnastics, true, :class=>"input_radio" %>Sim 
+	<%= f.radio_button :gymnastics, false, :class=>"input_radio" %>Não
+  </p>
+  <p>
+    <%= f.label :reason_gymnastics, "Por que?: " %><br />
+    <%= f.text_area :reason_gymnastics %>
+  </p>
+  <p>
+    <%= f.label :quality, "Há algum trabalho voltado a qualidade de vida? " %><br />
+    <%= f.text_area :quality %>
+  </p>
+  <p>
+    <%= f.label :map, "Mapa de risco ou mapeamento. " %><br />
+    <%= f.text_area :map %>
+  </p>
+  <p>
+    <%= f.label :absenteeism, "Absenteismo (% relacionados com doenças ocupacionais). " %><br />
+    <%= f.text_area :absenteeism %>
+  </p>
+  <p>
+    <%= f.label :rotation, "Turn-Over ou Rotatividade " %><br />
+    <%= f.text_area :rotation %>
+  </p>
+  <p>
+    <%= f.label :male_workers, "Funcionários Masculinos: " %>
+    <%= f.text_field :male_workers %>
+  </p>
+  <p>
+    <%= f.label :female_workers, "Funcionários Femininos: " %>
+    <%= f.text_field :female_workers %>
+  </p>
+  <p>
+    <%= f.label :agreement, "Convênio médico. Qual?" %><br />
+    <%= f.text_area :agreement %>
+  </p>
+  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_root_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+<% end %>
+</div>

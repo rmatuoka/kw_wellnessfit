@@ -1,0 +1,18 @@
+<div id="Box_form">
+	<%= form_for [:admin, @company,@sector] do |f| %>
+	  <%= f.error_messages %>
+	  <p>
+	    <%= f.label :name, "Nome"%>
+	    <%= f.text_field :name %>
+	  </p>
+	  <p>
+	    <%= f.label :description, "Descrição" %><br />
+	    <%= f.text_area :description %>
+	  </p>
+	  <p>
+	    <%= f.label :active, "Ativo ?" %>
+	    <%= f.check_box :active %>
+	  </p>
+	  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_sectors_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+	<% end %>
+</div>

@@ -1,0 +1,11 @@
+one:
+  company_id: 1
+  name: MyString
+  description: MyText
+  active: false
+
+two:
+  company_id: 1
+  name: MyString
+  description: MyText
+  active: false

@@ -1,0 +1,25 @@
+<% 
+	content_for :title do "Dados do Usuario" end
+%>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @user.name %>
+</p>
+<p>
+  <strong>Sobrenome:</strong>
+  <%= @user.last_name %>
+</p>
+<p>
+  <strong>E-mail:</strong>
+  <%= @user.email %>
+</p>
+<p>
+  <strong>Nivel:</strong>
+  <%= @user.role %>
+</p>
+<br />
+<br />
+<p>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_users_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+</p>

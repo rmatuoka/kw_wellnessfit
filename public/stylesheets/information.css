@@ -1,0 +1,24 @@
+	#General #Content #Right_box #options{
+		margin:20px;
+		position:relative;
+		height:auto;
+		width:auto;
+	}
+		#General #Content #Right_box #options .box_options{
+			position:relative;
+			float:left;
+			height:250px;
+			width:200px;
+			margin:0px 5px 10px 0px;
+		}
+			#General #Content #Right_box #options .box_options img{
+				margin:20px 20px;
+				height: 160px;
+				width: 160px;
+			}
+			#General #Content #Right_box #options .box_options p{
+				text-align:center;
+			}
+			#General #Content #Right_box #options .box_options a{
+				text-decoration:none;
+			}			

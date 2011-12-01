@@ -1,0 +1,124 @@
+<% title @company.fantasy_name %>
+
+<p>
+  <strong>Company Name:</strong>
+  <%= @company.company_name %>
+</p>
+<p>
+  <strong>Fantasy Name:</strong>
+  <%= @company.fantasy_name %>
+</p>
+<p>
+  <strong>Cnpj:</strong>
+  <%= @company.cnpj %>
+</p>
+<p>
+  <strong>Phone:</strong>
+  <%= @company.phone %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%= @company.address %>
+</p>
+<p>
+  <strong>District:</strong>
+  <%= @company.district %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%= @company.city %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%= @company.state %>
+</p>
+<p>
+  <strong>Zip Code:</strong>
+  <%= @company.zip_code %>
+</p>
+<p>
+  <strong>Responsible:</strong>
+  <%= @company.responsible %>
+</p>
+<p>
+  <strong>Segment:</strong>
+  <%= @company.segment %>
+</p>
+<p>
+  <strong>Date Visit:</strong>
+  <%= @company.date_visit %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @company.email %>
+</p>
+<p>
+  <strong>Electronic Address:</strong>
+  <%= @company.electronic_address %>
+</p>
+<p>
+  <strong>Doctor:</strong>
+  <%= @company.doctor %>
+</p>
+<p>
+  <strong>Nurse:</strong>
+  <%= @company.nurse %>
+</p>
+<p>
+  <strong>Security:</strong>
+  <%= @company.security %>
+</p>
+<p>
+  <strong>Engineering:</strong>
+  <%= @company.engineering %>
+</p>
+<p>
+  <strong>Rh Responsible:</strong>
+  <%= @company.rh_responsible %>
+</p>
+<p>
+  <strong>Rh Contact:</strong>
+  <%= @company.rh_contact %>
+</p>
+<p>
+  <strong>Gymnastics:</strong>
+  <%= @company.gymnastics %>
+</p>
+<p>
+  <strong>Reason Gymnastics:</strong>
+  <%= @company.reason_gymnastics %>
+</p>
+<p>
+  <strong>Quality:</strong>
+  <%= @company.quality %>
+</p>
+<p>
+  <strong>Map:</strong>
+  <%= @company.map %>
+</p>
+<p>
+  <strong>Absenteeism:</strong>
+  <%= @company.absenteeism %>
+</p>
+<p>
+  <strong>Rotation:</strong>
+  <%= @company.rotation %>
+</p>
+<p>
+  <strong>Male Workers:</strong>
+  <%= @company.male_workers %>
+</p>
+<p>
+  <strong>Female Workers:</strong>
+  <%= @company.female_workers %>
+</p>
+<p>
+  <strong>Agreement:</strong>
+  <%= @company.agreement %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_company_path(@company) %> |
+  <%= link_to "Destroy", [:admin, @company], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_companies_path %>
+</p>

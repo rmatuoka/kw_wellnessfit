@@ -9,7 +9,9 @@ gem 'mysql2', '< 0.3'
 gem "nifty-generators", :group => :development
 gem 'mail'
 gem 'mongrel'
-#gem "browser"
+gem "will_paginate", "~> 2.3.15"
+gem 'jquery-rails', '>= 1.0.12'
+gem "browser"
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -33,3 +35,4 @@ gem 'mongrel'
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "mocha", :group => :test

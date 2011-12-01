@@ -1,0 +1,32 @@
+<% title @company.company_name+" - Lista de Funcionários" %>
+
+<h1><%= @company.company_name %> - Funcionários</h1><br />
+<p>Verifique abaixo a lista dos funcionários cadastrados no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_company_functionary_path(@company)+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+    <th style="width:40%;">Nome</th>
+	<th style="width:25%;">Setor</th>
+    <th style="width:15%;">Ativo ?</th>
+    <th colspan="3" style="width:20%;">Ações</th>
+  </tr>
+  </thead> 
+  <tbody>
+  <% for functionary in @functionaries %>
+    <tr <%='class=notactive' if !functionary.active%>>
+      <td><%= functionary.name %></td>
+	  <td><%= functionary.sector.name if functionary.sector_id  %></td>
+      <td><%= print_active(functionary.active) %></td>
+
+      <td><%= link_to "Visualizar", admin_company_functionary_path(@company,functionary) %></td>
+      <td><%= link_to "Editar", edit_admin_company_functionary_path(@company,functionary) %></td>
+      <td><%= link_to "Excluir", admin_company_functionary_path(@company,functionary), :confirm => 'Esta operação não poderá ser desfeita, deseja continuar?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+

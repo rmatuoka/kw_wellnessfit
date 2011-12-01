@@ -1,0 +1,43 @@
+<% title @company.company_name+" - "+ @functionary.name %>
+
+<h1><%= @company.company_name %> - <%=@functionary.name%></h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+  <strong>Setor:</strong>
+  <%= @functionary.sector.name if @functionary.sector_id  %>
+</p>
+<p>
+  <strong>Nome:</strong>
+  <%= @functionary.name %>
+</p>
+<p>
+  <strong>Código Interno:</strong>
+  <%= @functionary.internal_code %>
+</p>
+<p>
+  <strong>Sexo:</strong>
+  <%= func_sex(@functionary.sex) %>
+</p>
+<%if !@functionary.active %>
+<p>
+  <strong>Ativo:</strong>
+  <%= print_active(@functionary.active) %>
+
+</p>
+<p>
+  <strong>Data em que ficou inativo:</strong>
+  <%= @functionary.inactivation_date %>
+</p>
+<p>
+  <strong>Razão:</strong><br />
+  <%= @functionary.reason %>
+</p>
+<%end%>
+<br />
+<br />
+<br />
+<p>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_functionaries_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+</p>

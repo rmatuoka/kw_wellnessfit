@@ -1,0 +1,72 @@
+<% title "Empresas" %>
+<table>
+  <tr>
+    <th>Company Name</th>
+    <th>Fantasy Name</th>
+    <th>Cnpj</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>District</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip Code</th>
+    <th>Responsible</th>
+    <th>Segment</th>
+    <th>Date Visit</th>
+    <th>Email</th>
+    <th>Electronic Address</th>
+    <th>Doctor</th>
+    <th>Nurse</th>
+    <th>Security</th>
+    <th>Engineering</th>
+    <th>Rh Responsible</th>
+    <th>Rh Contact</th>
+    <th>Gymnastics</th>
+    <th>Reason Gymnastics</th>
+    <th>Quality</th>
+    <th>Map</th>
+    <th>Absenteeism</th>
+    <th>Rotation</th>
+    <th>Male Workers</th>
+    <th>Female Workers</th>
+    <th>Agreement</th>
+  </tr>
+  <% for company in @companies %>
+    <tr>
+      <td><%= company.company_name %></td>
+      <td><%= company.fantasy_name %></td>
+      <td><%= company.cnpj %></td>
+      <td><%= company.phone %></td>
+      <td><%= company.address %></td>
+      <td><%= company.district %></td>
+      <td><%= company.city %></td>
+      <td><%= company.state %></td>
+      <td><%= company.zip_code %></td>
+      <td><%= company.responsible %></td>
+      <td><%= company.segment %></td>
+      <td><%= company.date_visit %></td>
+      <td><%= company.email %></td>
+      <td><%= company.electronic_address %></td>
+      <td><%= company.doctor %></td>
+      <td><%= company.nurse %></td>
+      <td><%= company.security %></td>
+      <td><%= company.engineering %></td>
+      <td><%= company.rh_responsible %></td>
+      <td><%= company.rh_contact %></td>
+      <td><%= company.gymnastics %></td>
+      <td><%= company.reason_gymnastics %></td>
+      <td><%= company.quality %></td>
+      <td><%= company.map %></td>
+      <td><%= company.absenteeism %></td>
+      <td><%= company.rotation %></td>
+      <td><%= company.male_workers %></td>
+      <td><%= company.female_workers %></td>
+      <td><%= company.agreement %></td>
+      <td><%= link_to "Show", [:admin, company] %></td>
+      <td><%= link_to "Edit", edit_admin_company_path(company) %></td>
+      <td><%= link_to "Destroy", [:admin, company], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Admin/Company", new_admin_company_path %></p>

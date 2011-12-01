@@ -1,123 +1,126 @@
+<h1 class="Form_title">DADOS DA EMRPESA</h1>
+
 <% title @company.fantasy_name %>
 
-<p>
-  <strong>Company Name:</strong>
+<p class="Form_p">
+  <strong>Nome da Empresa:</strong>
   <%= @company.company_name %>
 </p>
-<p>
-  <strong>Fantasy Name:</strong>
+<p class="Form_p">
+  <strong>Nome Fantasia:</strong>
   <%= @company.fantasy_name %>
 </p>
-<p>
-  <strong>Cnpj:</strong>
-  <%= @company.cnpj %>
-</p>
-<p>
-  <strong>Phone:</strong>
-  <%= @company.phone %>
-</p>
-<p>
-  <strong>Address:</strong>
-  <%= @company.address %>
-</p>
-<p>
-  <strong>District:</strong>
-  <%= @company.district %>
-</p>
-<p>
-  <strong>City:</strong>
-  <%= @company.city %>
-</p>
-<p>
-  <strong>State:</strong>
-  <%= @company.state %>
-</p>
-<p>
-  <strong>Zip Code:</strong>
-  <%= @company.zip_code %>
-</p>
-<p>
-  <strong>Responsible:</strong>
-  <%= @company.responsible %>
-</p>
-<p>
-  <strong>Segment:</strong>
+<p class="Form_p">
+  <strong>Segmento:</strong>
   <%= @company.segment %>
 </p>
-<p>
-  <strong>Date Visit:</strong>
+<p class="Form_p">
+  <strong>Data da visita:</strong>
   <%= @company.date_visit %>
 </p>
-<p>
+<p class="Form_p">
+  <strong>Endereço:</strong>
+  <%= @company.address %>
+</p>
+<p class="Form_p">
   <strong>Email:</strong>
   <%= @company.email %>
 </p>
-<p>
-  <strong>Electronic Address:</strong>
+<p class="Form_p">
+  <strong>Telefone:</strong>
+  <%= @company.phone %>
+</p>
+<p class="Form_p">
+  <strong>Endereço eletrônico:</strong>
   <%= @company.electronic_address %>
 </p>
-<p>
-  <strong>Doctor:</strong>
+<p class="Form_p">
+  <strong>Cnpj:</strong>
+  <%= @company.cnpj %>
+</p>
+<p class="Form_p">
+  <strong>Distrito:</strong>
+  <%= @company.district %>
+</p>
+<p class="Form_p">
+  <strong>Cidade:</strong>
+  <%= @company.city %>
+</p>
+<p class="Form_p">
+  <strong>Estado:</strong>
+  <%= @company.state %>
+</p>
+<p class="Form_p">
+  <strong>Cep:</strong>
+  <%= @company.zip_code %>
+</p>
+<p class="Form_p">
+  <strong>Responsavél:</strong>
+  <%= @company.responsible %>
+</p>
+<p class="Form_p">
+  <strong>Médico:</strong>
   <%= @company.doctor %>
 </p>
-<p>
-  <strong>Nurse:</strong>
+<p class="Form_p">
+  <strong>Enfermeiro(a):</strong>
   <%= @company.nurse %>
 </p>
-<p>
-  <strong>Security:</strong>
+<p class="Form_p">
+  <strong>Segurança:</strong>
   <%= @company.security %>
 </p>
-<p>
-  <strong>Engineering:</strong>
+<p class="Form_p">
+  <strong>Engenheiro:</strong>
   <%= @company.engineering %>
 </p>
-<p>
-  <strong>Rh Responsible:</strong>
+<p class="Form_p">
+  <strong>Responsável pelo Rh:</strong>
   <%= @company.rh_responsible %>
 </p>
-<p>
-  <strong>Rh Contact:</strong>
+<p class="Form_p">
+  <strong>Contato do Rh:</strong>
   <%= @company.rh_contact %>
 </p>
-<p>
-  <strong>Gymnastics:</strong>
+<h2 class="Form_title2">SOLICITAÇÃO PARA IMPLANTAÇÃO DO PROGRAMA DE GINÁSTICA LABORAL</h2>
+<p class="Form_p2">
+  <strong>Ginástica:</strong>
   <%= @company.gymnastics %>
 </p>
-<p>
-  <strong>Reason Gymnastics:</strong>
+<p class="Form_p2">
+  <strong>Motivo da Ginástica:<br /></strong>
   <%= @company.reason_gymnastics %>
 </p>
-<p>
-  <strong>Quality:</strong>
+<p class="Form_p2">
+  <strong>Qualidade:<br /></strong>
   <%= @company.quality %>
 </p>
-<p>
-  <strong>Map:</strong>
+<p class="Form_p2">
+  <strong>Mapa:<br /></strong>
   <%= @company.map %>
 </p>
-<p>
-  <strong>Absenteeism:</strong>
+<p class="Form_p2">
+  <strong>Absentismo(ociosidade):<br /></strong>
   <%= @company.absenteeism %>
 </p>
-<p>
-  <strong>Rotation:</strong>
+<p class="Form_p2">
+  <strong>Rodízio:<br /></strong>
   <%= @company.rotation %>
 </p>
-<p>
-  <strong>Male Workers:</strong>
+<p class="Form_p2">
+  <strong>Funcionários Homens:</strong>
   <%= @company.male_workers %>
 </p>
-<p>
-  <strong>Female Workers:</strong>
+<p class="Form_p2">
+  <strong>Funcionárias Mulheres:</strong>
   <%= @company.female_workers %>
 </p>
-<p>
-  <strong>Agreement:</strong>
+<p class="Form_p2">
+  <strong>Contrato:<br /></strong>
   <%= @company.agreement %>
 </p>
 
-<p>
+<p class="Form_buttons">
   <%= link_to "Edit", edit_admin_company_path(@company) %> |
   <%= link_to "Destroy", [:admin, @company], :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", admin_companies_path %>

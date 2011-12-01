@@ -13,6 +13,7 @@
 {
 	position:relative;
 	width:100%;
+	min-width:1200px;
 	min-height:212px;
 	height:auto;
 	overflow:hidden;
@@ -323,7 +324,61 @@
 			font-size:20px;
 			font-weight:normal;
 			color:#999;
-		}					
+		}	
+		.Form_title
+		{
+			position:relative;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:20px;
+			font-weight:normal;
+			color:#999;
+			text-align:left;
+			margin-top:10px;
+			margin-bottom:10px;
+		}	
+		.Form_title2
+		{
+			position:relative;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:20px;
+			font-weight:normal;
+			color:#999;
+			text-align:left;
+			margin-top:10px;
+			margin-bottom:10px;
+		}
+		.Form_p
+		{
+			position:relative;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:20px;
+			font-weight:normal;
+			color:#999;
+			text-align:left;
+			margin-bottom:5px;
+		}
+		.Form_p2
+		{
+			position:relative;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:20px;
+			font-weight:normal;
+			color:#999;
+			text-align:left;
+			margin-bottom:10px;
+		}
+	
+		.Form_buttons
+		{
+			position:relative;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:20px;
+			font-weight:normal;
+			color:#999;
+			text-align:left;
+			margin-top:5px;
+			margin-bottom:5px;
+		}	
 		#General #Content #Right_box p
 		{
 			position:relative;

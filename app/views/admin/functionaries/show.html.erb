@@ -18,7 +18,7 @@
 </p>
 <p>
   <strong>Data de Admissão:</strong>
-  <%= I18n.localize(@functionary.admission) %>
+  <%= I18n.localize(@functionary.admission) if !@functionary.admission.blank?%>
 </p>
 <p>
   <strong>Sexo:</strong>
@@ -32,7 +32,7 @@
 </p>
 <p>
   <strong>Data em que ficou inativo:</strong>
-  <%= I18n.localize(@functionary.inactivation_date) %>
+  <%= I18n.localize(@functionary.inactivation_date) if !@functionary.inactivation_date.blank?%>
 </p>
 <p>
   <strong>Razão:</strong><br />

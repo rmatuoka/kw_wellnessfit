@@ -1,3 +1,17 @@
+<%content_for :head do%>
+<script>
+	jQuery(document).ready(function () {
+		
+		function showbox(){
+		  jQuery("#functionary_active").is(':checked') ? jQuery("#box_active").hide() : jQuery("#box_active").show();
+		}
+		showbox();
+		jQuery("#functionary_active").click(showbox);
+
+	});
+	
+</script>
+<%end%>
 <div id="Box_form">
 	<%= form_for ([:admin, @company, @functionary]) do |f| %>
 	  <%= f.error_messages %>
@@ -14,6 +28,10 @@
 	    <%= f.text_field :internal_code %>
 	  </p>
 	  <p>
+	    <%= f.label :admission, "Data de Admissão"%>
+	    <%= f.date_select :admission, { :start_year => 1990, :end_year => Time.now.year}%>
+	  </p>	
+	  <p>
 	    <%= f.label :sex, "Sexo"%>
 		<%= f.radio_button :sex, true, :class=>"input_radio" %>Masculino
 		<%= f.radio_button :sex, false, :class=>"input_radio" %>Feminino
@@ -22,14 +40,17 @@
 	    <%= f.label :active, "Ativo?"%>
 	    <%= f.check_box :active  %>
 	  </p>
-	  <p>
-	    <%= f.label :inactivation_date, "Data em que ficou Inativo"%>
-	    <%= f.date_select :inactivation_date %>
-	  </p>
-	  <p>
-	    <%= f.label :reason, "Razão"%><br />
-	    <%= f.text_area :reason%>
-	  </p><br />
+	  <div id="box_active">
+			  <p>
+			    <%= f.label :inactivation_date, "Data em que ficou Inativo"%>
+			    <%= f.date_select :inactivation_date, { :start_year => 1990, :end_year => Time.now.year,:include_blank => true} %>
+			  </p>
+			  <p>
+			    <%= f.label :reason, "Razão"%><br />
+			    <%= f.text_area :reason%>
+			  </p>
+	  </div>
+  <br />
   <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_functionaries_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
 	<% end %>
 </div>

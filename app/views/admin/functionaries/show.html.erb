@@ -17,6 +17,10 @@
   <%= @functionary.internal_code %>
 </p>
 <p>
+  <strong>Data de Admissão:</strong>
+  <%= I18n.localize(@functionary.admission) %>
+</p>
+<p>
   <strong>Sexo:</strong>
   <%= func_sex(@functionary.sex) %>
 </p>
@@ -28,7 +32,7 @@
 </p>
 <p>
   <strong>Data em que ficou inativo:</strong>
-  <%= @functionary.inactivation_date %>
+  <%= I18n.localize(@functionary.inactivation_date) %>
 </p>
 <p>
   <strong>Razão:</strong><br />

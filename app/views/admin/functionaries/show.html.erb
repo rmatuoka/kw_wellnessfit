@@ -22,7 +22,7 @@
 </p>
 <p>
   <strong>Sexo:</strong>
-  <%= func_sex(@functionary.sex) %>
+  <%= func_sex(@functionary.sex) if !@functionary.sex.nil?%>
 </p>
 <%if !@functionary.active %>
 <p>

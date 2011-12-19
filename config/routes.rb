@@ -1,5 +1,7 @@
 KwWellnessfit::Application.routes.draw do
 
+  namespace(:admin){ resources :status_presences }
+
   get "news/index"
   get "news/show"
   get "labors/index"
@@ -27,6 +29,8 @@ KwWellnessfit::Application.routes.draw do
  
  #Inicio do namespace Admin
  namespace(:admin){
+   
+   resources :status_presences
    
    resources :companies do #Inicio das rotas vinculadas a companies
      member do

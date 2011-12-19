@@ -1,0 +1,21 @@
+<% title "Módulo de Status" %>
+
+<h1>Módulo de Status</h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+
+<p>
+  <strong>Name:</strong>
+  <%= @status_presence.name %>
+</p>
+<p>
+  <strong>Abbreviation:</strong>
+  <%= @status_presence.abbreviation %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_status_presence_path(@status_presence) %> |
+  <%= link_to "Destroy", [:admin, @status_presence], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_status_presences_path %>
+</p>

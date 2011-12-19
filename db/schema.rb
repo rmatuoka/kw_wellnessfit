@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111202132811) do
+ActiveRecord::Schema.define(:version => 20111219201619) do
 
   create_table "bouts", :force => true do |t|
     t.integer  "company_id"
@@ -89,6 +89,13 @@ ActiveRecord::Schema.define(:version => 20111202132811) do
     t.string   "name"
     t.text     "description"
     t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "status_presences", :force => true do |t|
+    t.string   "name"
+    t.string   "abbreviation"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,27 @@
+<% title "Módulo de Status" %>
+
+<h1>Módulo de Status</h1><br />
+<p>Visualize abaixo a lista dos status registrados no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_status_presence_path+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+    <th>Name</th>
+    <th>Abbreviation</th>
+    <th colspan="3" style="width:20%;">Ações</th>
+  </tr>
+  </thead> 
+  <tbody>
+  <% for status_presences in @status_presences %>
+    <tr>
+      <td><%= status_presences.name %></td>
+      <td><%= status_presences.abbreviation %></td>
+      <td><%= link_to "Show", [:admin, status_presences] %></td>
+      <td><%= link_to "Edit", edit_admin_status_presence_path(status_presences) %></td>
+      <td><%= link_to "Destroy", [:admin, status_presences], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

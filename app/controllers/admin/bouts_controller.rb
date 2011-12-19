@@ -4,45 +4,48 @@ class Admin::BoutsController < ApplicationController
       allow :admin 
       allow :supervisor, :empresario, :to =>[:show]
   end
-  before_filter :permission_check  
+  before_filter :permission_check, :load_company  
   
   def index
-    @bouts = Bout.all
+    @bouts = @company.bouts.all
   end
 
   def show
-    @bout = Bout.find(params[:id])
+    @bout = @company.bouts.find(params[:id])
   end
 
   def new
-    @bout = Bout.new
+    @bout = @company.bouts.build(:active => true)
   end
 
   def create
-    @bout = Bout.new(params[:bout])
+    @bout = @company.bouts.build(params[:bout])
     if @bout.save
-      redirect_to [:admin, @bout], :notice => "Successfully created bout."
+      redirect_to admin_company_bout_path(@company, @bout), :notice => "Successfully created bout."
     else
       render :action => 'new'
     end
   end
 
   def edit
-    @bout = Bout.find(params[:id])
+    @bout = @company.bouts.find(params[:id])
   end
 
   def update
-    @bout = Bout.find(params[:id])
+    @bout = @company.bouts.find(params[:id])
     if @bout.update_attributes(params[:bout])
-      redirect_to [:admin, @bout], :notice  => "Successfully updated bout."
+      redirect_to admin_company_bout_path(@company, @bout), :notice  => "Successfully updated bout."
     else
       render :action => 'edit'
     end
   end
 
   def destroy
-    @bout = Bout.find(params[:id])
+    @bout = @company.bouts.find(params[:id])
     @bout.destroy
-    redirect_to admin_bouts_url, :notice => "Successfully destroyed bout."
+    redirect_to admin_company_bouts_path(@company), :notice => "Successfully destroyed bout."
+  end
+  def load_company
+    @company = Company.find(params[:company_id])
   end
 end

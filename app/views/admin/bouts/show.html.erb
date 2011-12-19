@@ -1,24 +1,24 @@
-<% title "Admin/Bout" %>
+<% title @company.company_name+" - "+ @bout.name %>
 
+<h1><%= @company.company_name %> - <%=@bout.name%></h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
 <p>
-  <strong>Company:</strong>
-  <%= @bout.company_id %>
-</p>
-<p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @bout.name %>
 </p>
 <p>
-  <strong>Description:</strong>
+  <strong>Descrição:</strong>
   <%= @bout.description %>
 </p>
 <p>
-  <strong>Active:</strong>
-  <%= @bout.active %>
+  <strong>Ativo:</strong>
+  <%= print_active(@bout.active) %>
 </p>
-
+<br />
+<br />
+<br />
 <p>
-  <%= link_to "Edit", edit_admin_bout_path(@bout) %> |
-  <%= link_to "Destroy", [:admin, @bout], :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", admin_bouts_path %>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_bouts_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
 </p>

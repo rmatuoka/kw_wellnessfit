@@ -1,23 +1,29 @@
-<% title "Admin/Bouts" %>
+<% title @company.company_name+" - Lista de Turnos" %>
 
-<table>
+<h1><%= @company.company_name %> - Turnos</h1><br />
+<p>Verifique abaixo a lista dos turnos cadastrados no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_company_bout_path(@company)+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
   <tr>
-    <th>Company</th>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Active</th>
-  </tr>
+    <th style="width:50%;">Nome</th>
+    <th style="width:15%;">Ativo ?</th>
+    <th colspan="3" style="width:20%;">Ações</th>
+</tr>
+</thead> 
+<tbody>
   <% for bout in @bouts %>
-    <tr>
-      <td><%= bout.company_id %></td>
+    <tr <%='class=notactive' if !bout.active%>>
       <td><%= bout.name %></td>
-      <td><%= bout.description %></td>
-      <td><%= bout.active %></td>
-      <td><%= link_to "Show", [:admin, bout] %></td>
-      <td><%= link_to "Edit", edit_admin_bout_path(bout) %></td>
-      <td><%= link_to "Destroy", [:admin, bout], :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= print_active(bout.active) %></td>
+      <td><%= link_to "Visualizar", admin_company_bout_path(@company,bout) %></td>
+      <td><%= link_to "Editar", edit_admin_company_bout_path(@company,bout) %></td>
+      <td><%= link_to "Excluir", admin_company_bout_path(@company,bout), :confirm => 'Esta operação não poderá ser desfeita, deseja continuar?', :method => :delete %></td>
+
     </tr>
   <% end %>
+  </tbody>
 </table>
 
-<p><%= link_to "New Admin/Bout", new_admin_bout_path %></p>

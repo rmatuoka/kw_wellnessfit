@@ -1,20 +1,19 @@
-<%= form_for [:admin, @bout] do |f| %>
+<div id="Box_form">
+<%= form_for [:admin, @company, @bout] do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :company_id %><br />
-    <%= f.text_field :company_id %>
-  </p>
-  <p>
-    <%= f.label :name %><br />
+    <%= f.label :name, "Nome" %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :description %><br />
+    <%= f.label :description, "Descrição" %><br />
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.label :active %><br />
+    <%= f.label :active, "Ativo?" %><br />
     <%= f.check_box :active %>
   </p>
-  <p><%= f.submit %></p>
-<% end %>
+  <br />
+  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_bouts_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+	<% end %>
+</div>

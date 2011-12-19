@@ -7,8 +7,8 @@ class Admin::CompaniesController < ApplicationController
   before_filter :permission_check 
 
   def index
-    @companies = Company.all
-    #redirect_to admin_root_path
+    #@companies = Company.all
+    redirect_to admin_root_path
   end
 
   def show  

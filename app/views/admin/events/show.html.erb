@@ -1,0 +1,30 @@
+<% title @company.company_name+" - "+ I18n.localize(@event.event_date)+" - "+ @event.bout.name %>
+
+<h1><%= @company.company_name+" - "+ I18n.localize(@event.event_date)+" - "+ @event.bout.name %></h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+  <strong>Aula do dia:</strong>
+  <%= I18n.localize(@event.event_date) %>
+</p>
+<p>
+  <strong>Turno:</strong>
+  <%= @event.bout.name %>
+</p>
+
+<p>
+  <strong>Funcionários Presentes:</strong>
+  <%= @event.employees_present %>
+</p>
+<p>
+  <strong>Observações:</strong><br />
+  <%= @event.observation %>
+</p>
+
+<br />
+<br />
+<br />
+<p>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_events_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+</p>

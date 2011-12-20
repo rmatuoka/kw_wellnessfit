@@ -1,0 +1,11 @@
+one:
+  bout_id: 1
+  event_date: 2011-12-19
+  employees_present: 1
+  observation: MyText
+
+two:
+  bout_id: 1
+  event_date: 2011-12-19
+  employees_present: 1
+  observation: MyText

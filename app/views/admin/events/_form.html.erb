@@ -1,0 +1,24 @@
+<div id="Box_form">
+	<%= form_for [:admin,  @company, @event] do |f| %>
+	  <%= f.error_messages %>
+	  <p>
+	    <%= f.label :event_date, "Aula do dia" %>
+	    <%= f.date_select :event_date, { :start_year => 1990, :end_year => Time.now.year} %>
+	  </p>
+	  <p>
+	    <%= f.label :bout_id, "Turno" %>
+		<%= f.collection_select :bout_id,@turnos,:id,:name %> 
+		<%= link_to "[ adcionar novo ]",admin_company_bouts_path(@company), :style=>"margin-left: 10px;"%>
+	  </p>
+	  <p>
+	    <%= f.label :employees_present, "Funcionários Presentes"%>
+	    <%= f.text_field :employees_present %>
+	  </p>
+	  <p>
+	    <%= f.label :observation, "Observações" %><br />
+	    <%= f.text_area :observation %>
+	  </p>
+	  <br />
+	  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_events_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+		<% end %>
+	</div>

@@ -16,7 +16,7 @@
 	<%= form_for ([:admin, @company, @functionary]) do |f| %>
 	  <%= f.error_messages %>
 	  <p>
-	    <%= f.label :sector_id %>
+	    <%= f.label :sector_id, "Setor" %>
 		<%= f.collection_select :sector_id,@setores,:id,:name %>
 	  </p>
 	  <p>

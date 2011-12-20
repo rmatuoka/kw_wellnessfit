@@ -16,7 +16,8 @@ class Admin::EventsController < ApplicationController
 
   def new
     @event = @company.events.build
-    @turnos = @company.bouts.all
+    @turnos = @company.bouts.all_active
+    @sectors = @company.sectors.all_active
   end
 
   def create

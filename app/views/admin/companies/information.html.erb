@@ -27,9 +27,9 @@
 	</div>		
 	
 	<div class="box_options">
-		<%=link_to(image_tag("bt_adm_lista.jpg"),"#", :onclick=>"alert('Este recurso está sendo desenvovido')")%>
+		<%=link_to(image_tag("bt_adm_lista.jpg"), admin_company_events_path(@company))%>
 		<br />
-		<p><%=link_to("Listas de Chamada","#", :onclick=>"alert('Este recurso está sendo desenvovido')") %></p>
+		<p><%=link_to("Listas de Chamada",admin_company_events_path(@company)) %></p>
 	</div>
 	
 	<div class="box_options">

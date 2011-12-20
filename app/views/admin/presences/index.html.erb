@@ -1,0 +1,29 @@
+<% title "Admin/Presences" %>
+
+<%@presences.each do |p|%>
+	<%=p.functionary.name%> | 
+	
+	<%@status_presences.each do |s|%>
+		<%=link_to s.abbreviation, "#"%>
+	<%end%>
+	<br/>
+<%end%>
+<!-- 
+<table>
+  <tr>
+    <th>Funcionary</th>
+    <th>Event</th>
+    <th>Status Presence</th>
+  </tr>
+  <% for presence in @presences %>
+    <tr>
+      <td><%= presence.functionary.name %></td>
+      <td><%= presence.event_id %></td>
+      <td><%= presence.status_presence.name %></td>
+      <td><%= link_to "Show", [:admin, presence] %></td>
+      <td><%= link_to "Edit", edit_admin_presence_path(presence) %></td>
+      <td><%= link_to "Destroy", [:admin, presence], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+-->

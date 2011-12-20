@@ -1,0 +1,16 @@
+<%= form_for [:admin, @presence] do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :funcionary_id %><br />
+    <%= f.text_field :funcionary_id %>
+  </p>
+  <p>
+    <%= f.label :event_id %><br />
+    <%= f.text_field :event_id %>
+  </p>
+  <p>
+    <%= f.label :status_presence_id %><br />
+    <%= f.text_field :status_presence_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

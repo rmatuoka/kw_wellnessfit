@@ -4,14 +4,15 @@ class Admin::StatusPresencesController < ApplicationController
       allow :admin 
       allow :supervisor, :empresario, :to =>[:show]
   end
-  before_filter :permission_check
+  before_filter :permission_check, :check_status
   
   def index
-    @status_presences = StatusPresence.all
+    @status_presences = StatusPresence.all_unblock
   end
 
   def show
     @status_presence = StatusPresence.find(params[:id])
+    
   end
 
   def new
@@ -44,5 +45,9 @@ class Admin::StatusPresencesController < ApplicationController
     @status_presence = StatusPresence.find(params[:id])
     @status_presence.destroy
     redirect_to admin_status_presences_url, :notice => "Successfully destroyed status presence."
+  end
+  
+  def check_status
+    redirect_to admin_status_presences_path if params[:id].to_i == STATUS_PRESENCA_PADRAO 
   end
 end

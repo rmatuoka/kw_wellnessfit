@@ -23,6 +23,21 @@ class Admin::EventsController < ApplicationController
   def create
     @event = @company.events.build(params[:event])
     if @event.save
+      #IMPORTA OS FUNCIONARIOS PARA O MODEL PRESENCE
+      @sectors = @event.sectors.all
+      
+      @sectors.each do |s|
+        s.functionaries.all.each do |f|
+          @presence = Presence.new
+          @presence.functionary_id = f.id
+          @presence.event_id = @event.id
+          @presence.status_presence_id = STATUS_PRESENCA_PADRAO
+          
+          @presence.save
+        end
+      end
+      #FIM IMPORTACAO
+      
       redirect_to admin_company_event_path(@company,@event), :notice => "Successfully created event."
     else
       render :action => 'new'

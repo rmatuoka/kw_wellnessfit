@@ -1,0 +1,5 @@
+class Presence < ActiveRecord::Base
+  belongs_to :functionary
+  belongs_to :event
+  belongs_to :status_presence
+end

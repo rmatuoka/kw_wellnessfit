@@ -20,7 +20,7 @@
 	  </p>
 	<p>
 		<% @sectors.each do |sector| %>
-		     <%= check_box_tag 'event[sectors_ids][]', sector.id, @event.sectors.include?(sector) %><%= sector.name %><br />
+		     <%= check_box_tag 'event[sector_ids][]', sector.id, @event.sectors.include?(sector) %><%= sector.name %><br />
 		<% end %>
 	</p>
 	  <br />

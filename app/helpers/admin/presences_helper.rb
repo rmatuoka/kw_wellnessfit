@@ -1,0 +1,2 @@
+module Admin::PresencesHelper
+end

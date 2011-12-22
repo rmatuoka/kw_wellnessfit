@@ -27,4 +27,5 @@
 <br />
 <p>
 	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_events_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+	<%= submit_tag "Presenças",:type=>"button",:onclick=>"window.open('"+admin_company_event_presences_path(@company,@event)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
 </p>

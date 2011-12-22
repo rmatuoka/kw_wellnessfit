@@ -8,8 +8,8 @@
 <table cellspacing="0" class="tablesorter">
   <thead> 
   <tr>
-    <th>Name</th>
-    <th>Abbreviation</th>
+    <th>Nome</th>
+    <th>Abreviação</th>
     <th colspan="3" style="width:20%;">Ações</th>
   </tr>
   </thead> 
@@ -18,9 +18,9 @@
     <tr>
       <td><%= status_presences.name %></td>
       <td><%= status_presences.abbreviation %></td>
-      <td><%= link_to "Show", [:admin, status_presences] %></td>
-      <td><%= link_to "Edit", edit_admin_status_presence_path(status_presences) %></td>
-      <td><%= link_to "Destroy", [:admin, status_presences], :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Visualizar", [:admin, status_presences] %></td>
+      <td><%= link_to "Editar", edit_admin_status_presence_path(status_presences) %></td>
+      <td><%= link_to "Excluir", [:admin, status_presences], :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
   </tbody>

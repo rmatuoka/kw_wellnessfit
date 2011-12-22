@@ -198,7 +198,7 @@
 								#General #Content #Left_box #Item_category #Item_content ul#menu li ul.sub-menu
 								{
 									margin-left:10px;
-									display:none;
+									/*display:none; Comentado para exibir os menus abertos!*/
 								}
 									#General #Content #Left_box #Item_category #Item_content ul#menu li ul.sub-menu li a
 									{

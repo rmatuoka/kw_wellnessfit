@@ -6,16 +6,16 @@
 <br />
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @status_presence.name %>
 </p>
 <p>
-  <strong>Abbreviation:</strong>
+  <strong>Abreviação:</strong>
   <%= @status_presence.abbreviation %>
 </p>
-
+<br />
+<br />
+<br />
 <p>
-  <%= link_to "Edit", edit_admin_status_presence_path(@status_presence) %> |
-  <%= link_to "Destroy", [:admin, @status_presence], :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", admin_status_presences_path %>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_status_presences_path()+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
 </p>

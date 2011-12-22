@@ -49,4 +49,8 @@ class Admin::PresencesController < ApplicationController
   def load_event
     @event = Event.find(params[:event_id])
   end
+  
+  def update_presences(cod = nil, status = nil)
+    
+  end
 end

@@ -2,13 +2,16 @@
 	<%= form_for [:admin, @status_presence] do |f| %>
 	  <%= f.error_messages %>
 	  <p>
-	    <%= f.label :name %><br />
+	    <%= f.label :name, "Nome" %>
 	    <%= f.text_field :name %>
 	  </p>
 	  <p>
-	    <%= f.label :abbreviation %><br />
+	    <%= f.label :abbreviation, "Abreviação" %>
 	    <%= f.text_field :abbreviation %>
 	  </p>
-	  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"history.go(-1)", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+	  <br />
+	  <p>
+		<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_status_presences_path()+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %>
+	  </p>
 	<% end %>
 </div>

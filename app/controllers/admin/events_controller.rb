@@ -46,7 +46,8 @@ class Admin::EventsController < ApplicationController
 
   def edit
     @event = @company.events.find(params[:id])
-    @turnos = @company.bouts.all
+    @turnos = @company.bouts.all_active
+    @sectors = @company.sectors.all_active
   end
 
   def update

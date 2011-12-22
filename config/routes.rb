@@ -27,7 +27,7 @@ KwWellnessfit::Application.routes.draw do
  #Inicio do namespace Admin
  namespace(:admin){
    
-   resources :presences
+   resources :presences 
    resources :status_presences   
    resources :companies do #Inicio das rotas vinculadas a companies
      member do
@@ -59,5 +59,5 @@ KwWellnessfit::Application.routes.draw do
  match 'cadastro' => "users#new"
  match 'login' => 'user_sessions#new'  
  match 'logout' => 'user_sessions#destroy'
- 
+ #match '/admin/companies/:company_id/events/:event_id/presences/:blog_id/:user_id', :controller=> 'admin/presences', :action => 'update_presences'
 end

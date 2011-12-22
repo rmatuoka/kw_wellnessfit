@@ -37,7 +37,11 @@ KwWellnessfit::Application.routes.draw do
      resources :bouts
      resources :sectors  
      resources(:events){
-       resources :presences
+       resources :presences do
+        member do
+          get 'update_presences'
+        end
+       end
      }  
 
    end #Final das rotas vinculadas a companies
@@ -59,5 +63,9 @@ KwWellnessfit::Application.routes.draw do
  match 'cadastro' => "users#new"
  match 'login' => 'user_sessions#new'  
  match 'logout' => 'user_sessions#destroy'
+ 
+ #match '/admin/companies/:company_id/events/:event_id/presences/:status_presence/:user_id(.:format)' => 'admin/presences#update_presences'
+ 
+ 
  #match '/admin/companies/:company_id/events/:event_id/presences/:blog_id/:user_id', :controller=> 'admin/presences', :action => 'update_presences'
 end

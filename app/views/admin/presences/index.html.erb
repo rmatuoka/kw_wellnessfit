@@ -4,7 +4,7 @@
 	<%=p.functionary.name%> | 
 	
 	<%@status_presences.each do |s|%>
-		<%=link_to s.abbreviation, "#"%>
+		<%=link_to(s.abbreviation, update_presences_admin_company_event_presence_path(@company, @event, p.id) + "?sigla=" + s.abbreviation, :remote => true)%>
 	<%end%>
 	<br/>
 <%end%>

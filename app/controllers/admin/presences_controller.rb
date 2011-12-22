@@ -47,10 +47,11 @@ class Admin::PresencesController < ApplicationController
   end
   
   def load_event
+    @company = Company.find(params[:company_id])
     @event = Event.find(params[:event_id])
   end
   
-  def update_presences(cod = nil, status = nil)
-    
+  def update_presences
+    @sigla = params[:sigla]
   end
 end

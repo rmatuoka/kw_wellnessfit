@@ -41,8 +41,12 @@ class Admin::PresencesController < ApplicationController
   end
 
   def destroy
+    @erro = true
     @presence = @event.presences.find(params[:id])
-    @presence.destroy
+    @id = @presence.id
+    if @presence.destroy
+      @erro = false
+    end
     #redirect_to admin_presences_url, :notice => "Successfully destroyed presence."
   end
   
@@ -52,6 +56,24 @@ class Admin::PresencesController < ApplicationController
   end
   
   def update_presences
-    @sigla = params[:sigla]
+    @erro = true
+    if !params[:sigla].blank?
+        @presence = @event.presences.find(params[:id])
+        @presence.status_presence_id = params[:sigla] 
+        if @presence.save
+          @erro = false
+          @status_presences = StatusPresence.all_unblock
+          @out = ""
+          @status_presences.each do |s|
+      			 if @presence.status_presence_id == s.id
+      				 @out += "<td align=\"center\" class=\"th_selected\">#{s.abbreviation}</td>"
+      			 else 
+      				 @out += "<td align=\"center\"><a href=\"/admin/companies/#{@company.id}/events/#{@event.id}/presences/#{@presence.id}/update_presences?sigla=#{s.id.to_s}\" data-remote=\"true\">#{s.abbreviation}</a></td>"
+      			 end 
+      		end
+      		@out += "<td align=\"center\"><a href=\"/admin/companies/#{@company.id}/events/#{@event.id}/presences/#{@presence.id}\" data-confirm='Esta operação não poderá ser desfeita, deseja continuar?' data-method=\"delete\" data-remote=\"true\" rel=\"nofollow\">Não Participa!</a> </td>"
+      		puts @out
+        end
+    end
   end
 end

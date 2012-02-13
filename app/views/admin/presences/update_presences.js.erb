@@ -1,1 +1,9 @@
-alert('<%=@sigla%>');
+<% if !@erro%>
+	update = "";	
+	update += "   <td><%=@presence.functionary.name%></td>";
+	update += "	  <td><%=@presence.functionary.sector.name%></td>";
+	update += "   <%=j @out%> ";
+	jQuery('#Func_<%=@presence.id%>').html(update);
+<% else %>
+	alert("Ocorreu um erro ao processar a requisição");
+<% end %>

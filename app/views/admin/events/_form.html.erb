@@ -18,11 +18,13 @@
 	    <%= f.label :observation, "Observações" %><br />
 	    <%= f.text_area :observation %>
 	  </p>
+	<% if @insertevents %>
 	<p>
 		<% @sectors.each do |sector| %>
-		     <%= check_box_tag 'event[sector_ids][]', sector.id, @event.sectors.include?(sector) %><%= sector.name %><br />
+		     <%= check_box_tag 'event[sector_ids][]', sector.id, @event.sectors.include?(sector), :class=>"input_radio" %><%= sector.name %><br />
 		<% end %>
 	</p>
+	<% end %>
 	  <br />
 	  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_events_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
 		<% end %>

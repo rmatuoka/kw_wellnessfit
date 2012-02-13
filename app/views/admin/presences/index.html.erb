@@ -1,29 +1,37 @@
-<% title "Admin/Presences" %>
+<% title @company.company_name+" - Lista de Presenças" %>
 
-<%@presences.each do |p|%>
-	<%=p.functionary.name%> | 
-	
-	<%@status_presences.each do |s|%>
-		<%=link_to(s.abbreviation, update_presences_admin_company_event_presence_path(@company, @event, p.id) + "?sigla=" + s.abbreviation, :remote => true)%>
-	<%end%>
-	<br/>
-<%end%>
-<!-- 
-<table>
+<h1><%= @company.company_name %> - <%= I18n.localize(@presences.first.event.event_date)%> / <%= @presences.first.event.bout.name %></h1><br />
+<p>Verifique abaixo a lista dos funcionários participantes.</p><br />
+<br />
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
   <tr>
-    <th>Funcionary</th>
-    <th>Event</th>
-    <th>Status Presence</th>
+    <th style="width:40%;">Nome do Funcionario</th>
+	<th style="width:25%;">Setor</th>
+    <th colspan="<%=@status_presences.count + 1%>" style="width:35%;">Status da Presenças</th>
   </tr>
-  <%# for presence in @presences %>
-    <tr>
-      <td><%#= presence.functionary.name %></td>
-      <td><%#= presence.event_id %></td>
-      <td><%#= presence.status_presence.name %></td>
-      <td><%#= link_to "Show", [:admin, presence] %></td>
-      <td><%#= link_to "Edit", edit_admin_presence_path(presence) %></td>
-      <td><%#= link_to "Destroy", [:admin, presence], :confirm => 'Are you sure?', :method => :delete %></td>
+  </thead> 
+  <tbody>
+	<%@presences.each do |p|%>
+    <tr id="Func_<%=p.id%>">
+      <td><%=p.functionary.name%></td>
+	  <td><%=p.functionary.sector.name%></td>
+		<%@status_presences.each do |s|%>
+			<% if p.status_presence_id == s.id %>
+				<td align="center" class="th_selected"><%= s.abbreviation %></td>
+			<% else %>
+				<td align="center"><%=link_to(s.abbreviation, update_presences_admin_company_event_presence_path(@company, @event, p.id) + "?sigla=" + s.id.to_s, :remote => true)%></td>
+			<% end %>
+		<%end%>
+	  <td align="center"><%=link_to("Não Participa!", admin_company_event_presence_path(@company, @event, p.id), :confirm => 'Esta operação não poderá ser desfeita, deseja continuar?', :method => :delete, :remote => true)%> </td>		
     </tr>
-  <%# end %>
+  <% end %>
+  </tbody>
 </table>
--->
+<br />
+<p style="text-align: center;">	
+	<%= submit_tag "Nova Lista",:type=>"button",:onclick=>"window.open('"+new_admin_company_event_path(@company)+"','_self');", :class => "Bt_enviar"%>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_events_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+</p>
+<br />

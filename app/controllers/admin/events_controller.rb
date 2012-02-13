@@ -18,6 +18,7 @@ class Admin::EventsController < ApplicationController
     @event = @company.events.build
     @turnos = @company.bouts.all_active
     @sectors = @company.sectors.all_active
+    @insertevents = true
   end
 
   def create
@@ -38,7 +39,7 @@ class Admin::EventsController < ApplicationController
       end
       #FIM IMPORTACAO
       
-      redirect_to admin_company_event_path(@company,@event), :notice => "Successfully created event."
+      redirect_to admin_company_event_presences_path(@company,@event), :notice => "Successfully created event."
     else
       render :action => 'new'
     end
@@ -48,6 +49,7 @@ class Admin::EventsController < ApplicationController
     @event = @company.events.find(params[:id])
     @turnos = @company.bouts.all_active
     @sectors = @company.sectors.all_active
+    @insertevents = false
   end
 
   def update

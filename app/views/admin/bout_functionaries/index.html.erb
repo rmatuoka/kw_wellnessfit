@@ -1,6 +1,6 @@
 <% title @functionary.name+" - Lista de Turnos" %>
 
-<h1><%= link_to @functionary.name, admin_company_functionaries_path(@company)%> - Lista de Turnos</h1><br />
+<h1><%= link_to @functionary.name, admin_company_functionary_path(@company,@functionary)%> - Lista de Turnos</h1><br />
 <p>Verifique abaixo a lista de turnos do funcionário cadastrados no sistema.</p><br />
 <br />
 <p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_company_functionary_bout_functionary_path(@company, @functionary)+"','_self');", :class => "Bt_enviar"%> </p>

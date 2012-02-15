@@ -1,7 +1,7 @@
 <% if !@erro%>
 	update = "";	
 	update += "   <td><%=@presence.functionary.name%></td>";
-	update += "	  <td><%=@presence.functionary.sector.name%></td>";
+	update += "	  <td><%=@presence.sector.name%></td>";
 	update += "   <%=j @out%> ";
 	jQuery('#Func_<%=@presence.id%>').html(update);
 <% else %>

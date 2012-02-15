@@ -8,11 +8,7 @@
 	  <p>
 	    <%= f.label :bout_id, "Turno" %>
 		<%= f.collection_select :bout_id,@turnos,:id,:name %> 
-		<%= link_to "[ adcionar novo ]",admin_company_bouts_path(@company), :style=>"margin-left: 10px;"%>
-	  </p>
-	  <p>
-	    <%= f.label :employees_present, "Funcionários Presentes"%>
-	    <%= f.text_field :employees_present %>
+		<%#= link_to "[ adcionar novo ]",admin_company_bouts_path(@company), :style=>"margin-left: 10px;"%>
 	  </p>
 	  <p>
 	    <%= f.label :observation, "Observações" %><br />

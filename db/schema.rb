@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120215125341) do
+ActiveRecord::Schema.define(:version => 20120215202247) do
 
   create_table "bout_functionaries", :force => true do |t|
     t.integer  "functionary_id"
@@ -64,6 +64,16 @@ ActiveRecord::Schema.define(:version => 20120215125341) do
     t.datetime "updated_at"
   end
 
+  create_table "downloads", :force => true do |t|
+    t.string   "name"
+    t.string   "archive_file_name"
+    t.string   "archive_content_type"
+    t.integer  "archive_file_size"
+    t.datetime "archive_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "events", :force => true do |t|
     t.integer  "bout_id"
     t.date     "event_date"
@@ -83,7 +93,6 @@ ActiveRecord::Schema.define(:version => 20120215125341) do
 
   create_table "functionaries", :force => true do |t|
     t.integer  "company_id"
-    t.integer  "sector_id"
     t.string   "name"
     t.string   "internal_code"
     t.boolean  "active"
@@ -101,6 +110,7 @@ ActiveRecord::Schema.define(:version => 20120215125341) do
     t.integer  "status_presence_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sector_id"
   end
 
   create_table "roles", :force => true do |t|

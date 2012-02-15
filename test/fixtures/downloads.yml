@@ -1,0 +1,13 @@
+one:
+  name: MyString
+  archive_file_name: MyString
+  archive_content_type: MyString
+  archive_file_size: 1
+  archive_updated_at: 2012-02-15 18:22:47
+
+two:
+  name: MyString
+  archive_file_name: MyString
+  archive_content_type: MyString
+  archive_file_size: 1
+  archive_updated_at: 2012-02-15 18:22:47

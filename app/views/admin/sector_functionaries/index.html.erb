@@ -1,6 +1,6 @@
 <% title @functionary.name+" - Lista de Setores" %>
 
-<h1><%= link_to @functionary.name, admin_company_functionaries_path(@company)%> - Lista de Setores</h1><br />
+<h1><%= link_to @functionary.name, admin_company_functionary_path(@company,@functionary)%> - Lista de Setores</h1><br />
 <p>Verifique abaixo a lista de setores do funcionário cadastrados no sistema.</p><br />
 <br />
 <p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_company_functionary_sector_functionary_path(@company, @functionary)+"','_self');", :class => "Bt_enviar"%> </p>

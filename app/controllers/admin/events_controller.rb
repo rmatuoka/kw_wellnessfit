@@ -26,18 +26,25 @@ class Admin::EventsController < ApplicationController
     if @event.save
       #IMPORTA OS FUNCIONARIOS PARA O MODEL PRESENCE
       @sectors = @event.sectors.all
-      
-      @sectors.each do |s|
-        s.functionaries.all.each do |f|
-          @presence = Presence.new
-          @presence.functionary_id = f.id
-          @presence.event_id = @event.id
-          @presence.status_presence_id = STATUS_PRESENCA_PADRAO
-          
-          @presence.save
-        end
+      @present_functionaries = BoutFunctionary.find(:all,
+  												    :select=> "`bout_functionaries`.`functionary_id`, `sector_functionaries`.`functionary_id`, `sector_functionaries`.`sector_id`",
+  												    :joins=>"INNER JOIN `sector_functionaries` ON `bout_functionaries`.`functionary_id` = `sector_functionaries`.`functionary_id`" ,
+  												    :conditions=>['`bout_functionaries`.`start_date` <= ?
+                                            AND	((`bout_functionaries`.`end_date` >= ? ) OR `bout_functionaries`.`end_date` is null)
+                                            AND `sector_functionaries`.`start_date` <= ?
+                                            AND	((`sector_functionaries`.`end_date` >= ? ) OR `sector_functionaries`.`end_date` is null)
+                                            AND `bout_functionaries`.`bout_id` = ?
+                                            AND `sector_functionaries`.`sector_id` IN (?)' , @event.event_date,@event.event_date,@event.event_date,@event.event_date,@event.bout_id,@sectors.each]
+                              )
+      @present_functionaries.each do |f|
+        @presence = Presence.new
+        @presence.functionary_id = f.functionary_id
+        @presence.sector_id = f.sector_id
+        @presence.event_id = @event.id
+        @presence.status_presence_id = STATUS_PRESENCA_PADRAO       
+        @presence.save        
       end
-      #FIM IMPORTACAO
+    #FIM IMPORTACAO
       
       redirect_to admin_company_event_presences_path(@company,@event), :notice => "Successfully created event."
     else

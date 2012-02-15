@@ -52,4 +52,6 @@
 <br />
 <p>
 	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_functionaries_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+	<%= submit_tag "Turnos",:type=>"button",:onclick=>"window.open('"+admin_company_functionary_bout_functionaries_path(@company,@functionary)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+	<%= submit_tag "Setores",:type=>"button",:onclick=>"window.open('"+admin_company_functionary_sector_functionaries_path(@company,@functionary)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>		
 </p>

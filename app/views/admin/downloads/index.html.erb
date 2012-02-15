@@ -1,0 +1,24 @@
+<% title "Downloads" %>
+
+<h1>Módulo de Downloads</h1><br />
+<p>Visualize abaixo a lista dos downloads registrados no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_download_path+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+    <th>Nome</th>
+    <th colspan="3" style="width:20%;">Ações</th>
+  </tr>
+  </thead> 
+  <tbody>
+	  <% for download in @downloads %>
+	    <tr>
+	      <td><%= download.name %></td>
+	      <td><%= link_to "Viasualizar", [:admin, download] %></td>
+	      <td><%= link_to "Editar", edit_admin_download_path(download) %></td>
+	      <td><%= link_to "Excluir", [:admin, download], :confirm => 'Are you sure?', :method => :delete %></td>    </tr>
+  <% end %>
+  </tbody>
+</table>

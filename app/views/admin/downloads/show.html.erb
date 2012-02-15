@@ -1,0 +1,28 @@
+<% title "Admin/Download" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @download.name %>
+</p>
+<p>
+  <strong>Archive File Name:</strong>
+  <%= @download.archive_file_name %>
+</p>
+<p>
+  <strong>Archive Content Type:</strong>
+  <%= @download.archive_content_type %>
+</p>
+<p>
+  <strong>Archive File Size:</strong>
+  <%= @download.archive_file_size %>
+</p>
+<p>
+  <strong>Archive Updated At:</strong>
+  <%= @download.archive_updated_at %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_download_path(@download) %> |
+  <%= link_to "Destroy", [:admin, @download], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_downloads_path %>
+</p>

@@ -16,7 +16,7 @@
 	<%@presences.each do |p|%>
     <tr id="Func_<%=p.id%>">
       <td><%=p.functionary.name%></td>
-	  <td><%=p.functionary.sector.name%></td>
+	  <td><%=p.sector.name%></td>
 		<%@status_presences.each do |s|%>
 			<% if p.status_presence_id == s.id %>
 				<td align="center" class="th_selected"><%= s.abbreviation %></td>

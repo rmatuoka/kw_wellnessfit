@@ -1,0 +1,29 @@
+<% title @functionary.name+" - "+ @bout_functionary.bout.name %>
+
+<h1><%= @functionary.name+" - "+ @bout_functionary.bout.name%></h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+  <strong>Funcionário:</strong>
+  <%= @bout_functionary.functionary.name %>
+</p>
+<p>
+  <strong>Turno:</strong>
+  <%= @bout_functionary.bout.name %>
+</p>
+<p>
+  <strong>Inicio:</strong>
+  <%= I18n.localize(@bout_functionary.start_date) if !@bout_functionary.start_date.blank? %>
+</p>
+<p>
+  <strong>Fim:</strong>
+  <%= I18n.localize(@bout_functionary.end_date) if !@bout_functionary.end_date.blank? %>
+</p>
+
+<br />
+<br />
+<br />
+<p>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_functionary_bout_functionaries_path(@company,@functionary)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+</p>

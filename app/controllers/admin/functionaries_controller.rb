@@ -12,6 +12,8 @@ class Admin::FunctionariesController < ApplicationController
 
   def show
     @functionary = @company.functionaries.find(params[:id])
+    @bout = @functionary.bout_functionaries.boutnow
+    @sector = @functionary.sector_functionaries.sectornow
   end
 
   def new

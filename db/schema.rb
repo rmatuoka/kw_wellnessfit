@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111220182252) do
+ActiveRecord::Schema.define(:version => 20120215125341) do
+
+  create_table "bout_functionaries", :force => true do |t|
+    t.integer  "functionary_id"
+    t.integer  "bout_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "bouts", :force => true do |t|
     t.integer  "company_id"
@@ -105,6 +114,15 @@ ActiveRecord::Schema.define(:version => 20111220182252) do
   create_table "roles_users", :id => false, :force => true do |t|
     t.integer  "user_id"
     t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sector_functionaries", :force => true do |t|
+    t.integer  "functionary_id"
+    t.integer  "sector_id"
+    t.date     "start_date"
+    t.date     "end_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

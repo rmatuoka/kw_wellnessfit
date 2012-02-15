@@ -1,0 +1,32 @@
+<% title @functionary.name+" - Lista de Setores" %>
+
+<h1><%= link_to @functionary.name, admin_company_functionaries_path(@company)%> - Lista de Setores</h1><br />
+<p>Verifique abaixo a lista de setores do funcionário cadastrados no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_company_functionary_sector_functionary_path(@company, @functionary)+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+    <th style="width:25%;">Funcionário</th>
+    <th style="width:15%;">Turno</th>
+    <th style="width:15%;">Inicio</th>
+    <th style="width:15%;">Fim</th>
+    <th colspan="3" style="width:30%;">Ações</th>
+  </tr>
+  </thead> 
+  <tbody>
+  <% for sector_functionary in @sector_functionaries %>
+    <tr <%='class=notactive' if !sector_functionary.end_date.blank?%>>
+      <td><%= sector_functionary.functionary.name %></td>
+      <td><%= sector_functionary.sector.name %></td>
+      <td><%= I18n.localize(sector_functionary.start_date) if !sector_functionary.start_date.blank? %></td>
+      <td><%= I18n.localize(sector_functionary.end_date) if !sector_functionary.end_date.blank? %></td>
+
+      <td><%= link_to "Visualizar", admin_company_functionary_sector_functionary_path(@company,@functionary,sector_functionary) %></td>
+      <td><%= link_to "Editar", edit_admin_company_functionary_sector_functionary_path(@company,@functionary, sector_functionary) %></td>
+      <td><%= link_to "Excluir", admin_company_functionary_sector_functionary_path(@company,@functionary,sector_functionary), :confirm => 'Esta operação não poderá ser desfeita, deseja continuar?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

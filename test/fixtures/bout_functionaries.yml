@@ -1,0 +1,11 @@
+one:
+  functionary_id: 1
+  bout_id: 1
+  start_date: 2012-02-15
+  end_date: 2012-02-15
+
+two:
+  functionary_id: 1
+  bout_id: 1
+  start_date: 2012-02-15
+  end_date: 2012-02-15

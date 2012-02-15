@@ -5,10 +5,6 @@
 <p>Verifique se as informações abaixo estão corretas.</p><br />
 <br />
 <p>
-  <strong>Setor:</strong>
-  <%= @functionary.sector.name if @functionary.sector_id  %>
-</p>
-<p>
   <strong>Nome:</strong>
   <%= @functionary.name %>
 </p>
@@ -37,6 +33,18 @@
 <p>
   <strong>Razão:</strong><br />
   <%= @functionary.reason %>
+</p>
+<%end%>
+<% if @bout.count > 0%>
+<p>
+  <strong>Turno atual:</strong>
+  <%= @bout.first.bout.name %>
+</p>
+<%end%>
+<% if @sector.count > 0%>
+<p>
+  <strong>Setor atual:</strong>
+  <%= @sector.first.sector.name %>
 </p>
 <%end%>
 <br />

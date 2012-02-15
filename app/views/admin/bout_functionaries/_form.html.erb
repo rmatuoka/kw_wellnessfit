@@ -1,0 +1,20 @@
+<div id="Box_form">
+<%= form_for ([:admin, @company, @functionary, @bout_functionary]) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :bout_id, "Turno" %>
+	<%= f.collection_select :bout_id,@turnos,:id,:name %> 
+	<%= link_to "[ adcionar novo ]",admin_company_bouts_path(@company), :style=>"margin-left: 10px;"%>
+  </p>
+  <p>
+    <%= f.label :start_date, "Inicio"%>
+    <%= f.date_select :start_date, { :start_year => 1980, :end_year => Time.now.year,:include_blank => true} %>
+  </p>
+  <p>
+    <%= f.label :end_date, "Fim" %>
+    <%= f.date_select :end_date, { :start_year => 1980, :end_year => Time.now.year,:include_blank => true} %>
+  </p>
+  <br />
+  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_functionary_bout_functionaries_path(@company,@functionary)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+	<% end %>
+</div>

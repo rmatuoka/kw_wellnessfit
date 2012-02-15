@@ -1,4 +1,5 @@
 KwWellnessfit::Application.routes.draw do
+
   get "news/index"
   get "news/show"
   get "labors/index"
@@ -33,7 +34,10 @@ KwWellnessfit::Application.routes.draw do
      member do
        get 'information'
      end
-     resources :functionaries
+     resources :functionaries do
+       resources :bout_functionaries
+       resources :sector_functionaries
+     end
      resources :bouts
      resources :sectors  
      resources(:events){

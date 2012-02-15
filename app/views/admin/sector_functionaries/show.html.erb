@@ -1,0 +1,29 @@
+<% title @functionary.name+" - "+ @sector_functionary.sector.name %>
+
+<h1><%= @functionary.name+" - "+ @sector_functionary.sector.name%></h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+  <strong>Funcionário:</strong>
+  <%= @sector_functionary.functionary.name %>
+</p>
+<p>
+  <strong>Setor:</strong>
+  <%= @sector_functionary.sector.name %>
+</p>
+<p>
+  <strong>Inicio:</strong>
+  <%= I18n.localize(@sector_functionary.start_date) if !@sector_functionary.start_date.blank? %>
+</p>
+<p>
+  <strong>Fim:</strong>
+  <%= I18n.localize(@sector_functionary.end_date) if !@sector_functionary.end_date.blank? %>
+</p>
+
+<br />
+<br />
+<br />
+<p>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_functionary_sector_functionaries_path(@company,@functionary)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+</p>

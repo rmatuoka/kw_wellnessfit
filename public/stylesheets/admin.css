@@ -324,7 +324,13 @@
 			font-size:20px;
 			font-weight:normal;
 			color:#999;
-		}	
+		}
+			#General #Content #Right_box h1 a
+			{
+				font-size:20px;
+				color:#999;
+			}
+		
 		.Form_title
 		{
 			position:relative;

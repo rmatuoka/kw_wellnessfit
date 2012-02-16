@@ -1,4 +1,4 @@
-<% title "Downloads" %>
+<% title "Módulo de Downloads" %>
 
 <h1>Módulo de Downloads</h1><br />
 <p>Visualize abaixo a lista dos downloads registrados no sistema.</p><br />
@@ -16,7 +16,7 @@
 	  <% for download in @downloads %>
 	    <tr>
 	      <td><%= download.name %></td>
-	      <td><%= link_to "Viasualizar", [:admin, download] %></td>
+	      <td><%= link_to "Visualizar", [:admin, download] %></td>
 	      <td><%= link_to "Editar", edit_admin_download_path(download) %></td>
 	      <td><%= link_to "Excluir", [:admin, download], :confirm => 'Are you sure?', :method => :delete %></td>    </tr>
   <% end %>

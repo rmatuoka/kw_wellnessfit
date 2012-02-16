@@ -44,4 +44,8 @@ class Admin::DownloadsController < ApplicationController
     @download.destroy
     redirect_to admin_downloads_url, :notice => "Successfully destroyed download."
   end
+    def baixar
+      @datafile = Download.find(params[:id])
+      send_file(@datafile.archive.path,:disposition => 'inline')
+    end 
 end

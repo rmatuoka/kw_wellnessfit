@@ -10,6 +10,6 @@
 	<%=f.file_field :archive %>
   </p>	
   <br />
-  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_company_functionaries_path(@company)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_downloads_path()+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
 	<% end %>
 </div>

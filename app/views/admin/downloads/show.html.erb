@@ -1,28 +1,32 @@
-<% title "Admin/Download" %>
+<% title "Módulo de Downloads" %>
+
+<h1>Módulo de Downloads</h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @download.name %>
 </p>
 <p>
-  <strong>Archive File Name:</strong>
+  <strong>Nome do Arquivo:</strong>
   <%= @download.archive_file_name %>
 </p>
 <p>
-  <strong>Archive Content Type:</strong>
+  <strong>Tipo de Arquivo:</strong>
   <%= @download.archive_content_type %>
 </p>
 <p>
-  <strong>Archive File Size:</strong>
-  <%= @download.archive_file_size %>
-</p>
-<p>
-  <strong>Archive Updated At:</strong>
-  <%= @download.archive_updated_at %>
+  <strong>Tamanho do Arquivo:</strong>
+  <%= number_to_human_size(@download.archive_file_size) %>
 </p>
 
+<br />
+<br />
+<br />
 <p>
-  <%= link_to "Edit", edit_admin_download_path(@download) %> |
-  <%= link_to "Destroy", [:admin, @download], :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", admin_downloads_path %>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_downloads_path()+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+	<%= submit_tag "Baixar!",:type=>"button",:onclick=>"window.open('"+ baixar_admin_download_path(@download)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+	<%= submit_tag "Abrir!",:type=>"button",:onclick=>"window.open('"+ @download.archive.url+"','_new');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>		
 </p>

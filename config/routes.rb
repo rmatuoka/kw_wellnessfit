@@ -29,7 +29,11 @@ KwWellnessfit::Application.routes.draw do
  #Inicio do namespace Admin
  namespace(:admin){
    
-   resources :downloads
+   resources :downloads do
+     member do
+       get :baixar
+     end
+   end
    resources :presences 
    resources :status_presences   
    resources :companies do #Inicio das rotas vinculadas a companies
@@ -59,13 +63,12 @@ KwWellnessfit::Application.routes.draw do
      end
    end
    
-   
+ 
    root :to => "static_contents#index"
  }
  #Final do namespace Admin
  
  root :to => "home#index"
- 
  match 'cadastro' => "users#new"
  match 'login' => 'user_sessions#new'  
  match 'logout' => 'user_sessions#destroy'

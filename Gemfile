@@ -13,6 +13,7 @@ gem "will_paginate", "~> 2.3.15"
 gem 'jquery-rails', '>= 1.0.12'
 gem "browser"
 gem 'paperclip', '~> 2.6.0'
+gem 'cocaine', '~> 0.2.1'
 
 # Use unicorn as the web server
 # gem 'unicorn'

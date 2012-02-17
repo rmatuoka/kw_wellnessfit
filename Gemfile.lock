@@ -93,6 +93,7 @@ PLATFORMS
 
 DEPENDENCIES
   browser
+  cocaine (~> 0.2.1)
   jquery-rails (>= 1.0.12)
   mail
   mocha

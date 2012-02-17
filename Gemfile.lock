@@ -99,6 +99,6 @@ DEPENDENCIES
   mongrel
   mysql2 (< 0.3)
   nifty-generators
-  paperclip
+  paperclip (>= 2.4.0)
   rails (= 3.0.3)
   will_paginate (~> 2.3.15)
